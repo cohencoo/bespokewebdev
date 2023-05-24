@@ -7,9 +7,7 @@ if (success) {
     try {
         window.history.replaceState({}, document.title, "/")
     } catch (e) {}
-    alert(
-        "Thanks for your message! We've successfully received it and will get back to you as soon as possible"
-    )
+    alert("Thanks for your message! We'll get back to you within 24 hours.")
 }
 
 const slideshow = {

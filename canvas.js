@@ -106,7 +106,7 @@ function startBanner() {
         ) {
             drawImage(imageObjects[randomBetween(0, imageObjects.length - 1)])
         }
-    }, 350)
+    }, 300)
 }
 
 window.addEventListener("resize", updateCanvasSize)
