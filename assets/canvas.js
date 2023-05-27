@@ -1,7 +1,7 @@
 const canvas = document.getElementById("showcase")
 const ctx = canvas.getContext("2d")
 
-const imageConfig = "png: 1-16 & webp: 1-8"
+const imageConfig = "png: 1-16 & webp: 1-9"
 
 const parseConfig = (config) => {
     const formats = config.split("&").map((item) => item.trim())

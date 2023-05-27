@@ -63,7 +63,7 @@ function updateMockup(checked) {
 
 const slideshow = {
     slide: 1,
-    maxSlides: 8,
+    maxSlides: 9,
     slideClock: null,
     nextSlide: () => {
         slideshow.slide++
