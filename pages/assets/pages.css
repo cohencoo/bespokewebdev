@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
+
+.page {
+    font-family: "Crimson Text", serif;
+    font-size: 20px;
+    background: white;
+    border: 2px ridge #a3a3a3;
+    border-radius: 0;
+    padding: 6rem 5rem;
+    color: black;
+    max-width: 1100px;
+    margin: 8rem auto;
+    min-height: 100vh;
+}
+
+.page .back {
+    font-size: 24px;
+    font-weight: 600;
+    color: #555;
+    width: fit-content;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.page .published {
+    color: #555;
+    font-size: 18px;
+    margin: 14px 0 2rem 0;
+}
+
+.page h1 {
+    font-family: "Libre Baskerville", serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.page h2 {
+    font-size: 25px;
+    font-family: "Libre Baskerville", serif;
+    margin: 2rem 0 1rem 0;
+}
+
+.page li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.page .read-more {
+    width: 100%;
+    max-width: 800px;
+    border-top: 1.5px solid #ddd;
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+    margin: 3rem auto 0 auto;
+    font-size: 20px;
+}
+
+.page .read-more h2 {
+    margin: 0 0 1rem 0;
+}
+
+.page .read-more .links {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 2rem;
+}
+
+.page .read-more .links a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ff9d00;
+    color: #ff9d00;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    .page {
+        margin: 0rem;
+        padding: 6rem 1.5rem 4rem 1.5rem;
+    }
+}

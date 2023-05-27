@@ -1,42 +1,34 @@
 const canvas = document.getElementById("showcase")
 const ctx = canvas.getContext("2d")
 
-const images = [
-    "./banner/1.webp",
-    "./banner/2.webp",
-    "./banner/3.webp",
-    "./banner/4.webp",
-    "./banner/5.webp",
-    "./banner/6.webp",
-    "./banner/7.webp",
-    "./banner/8.webp",
-    "./banner/1.png",
-    "./banner/2.png",
-    "./banner/3.png",
-    "./banner/4.png",
-    "./banner/5.png",
-    "./banner/6.png",
-    "./banner/7.png",
-    "./banner/8.png",
-    "./banner/9.png",
-    "./banner/10.png",
-]
+const imageConfig = "png: 1-16 & webp: 1-8"
 
+const parseConfig = (config) => {
+    const formats = config.split("&").map((item) => item.trim())
+    const imageList = []
+
+    for (const format of formats) {
+        const [extension, range] = format.split(":").map((item) => item.trim())
+        const [start, end] = range.split("-").map((item) => parseInt(item))
+        for (let i = start; i <= end; i++) imageList.push(`./banner/${i}.${extension}`)
+    }
+
+    return imageList
+}
+
+const images = parseConfig(imageConfig)
 const imageObjects = []
 const displayedImages = []
 
+const maxDisplayedImages = 20
+const maxSimultaneousImages = 10
+
+const randomBetween = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 images.forEach((src) => {
     const img = new Image()
     img.src = src
     imageObjects.push(img)
 })
-
-const maxDisplayedImages = 40
-const maxSimultaneousImages = 10
-
-function randomBetween(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
 
 function drawImage(imgObj) {
     const size = window.innerWidth < 768 ? randomBetween(100, 150) : randomBetween(150, 300)
