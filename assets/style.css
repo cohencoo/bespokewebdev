@@ -37,6 +37,13 @@ a:hover {
     text-decoration: none;
 }
 
+.material-symbols-rounded {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 button {
     border: none;
     outline: none;
@@ -506,7 +513,7 @@ footer .copyright {
     }
 
     footer {
-        padding: 2rem 5vw;
+        padding: 2rem 5vw 8rem 5vw;
     }
     footer .links {
         grid-template-columns: 1fr;
