@@ -1,5 +1,5 @@
-const banner = document.querySelector(".banner")
-const progressContainer = document.querySelector(".progress-container")
+const maxSlides = 9
+const swiperWrapper = document.querySelector(".swiper-wrapper")
 document.getElementById("copyright").innerText = new Date().getUTCFullYear()
 
 function refEmail() {
@@ -61,40 +61,31 @@ function updateMockup(checked) {
     }
 }
 
-const slideshow = {
-    slide: 1,
-    maxSlides: 9,
-    slideClock: null,
-    nextSlide: () => {
-        slideshow.slide++
-        if (slideshow.slide > slideshow.maxSlides) slideshow.slide = 1
-        slideshow.setSlide()
-    },
-    setSlide: () => {
-        banner.style.backgroundImage = `url(../banner/${slideshow.slide}.webp)`
-        document.querySelectorAll(".index").forEach((child, index) => {
-            child.classList.remove("index-active")
-            if (index + 1 === slideshow.slide) child.classList.add("index-active")
-        })
-    },
-}
-
-for (let i = 0; i < slideshow.maxSlides; i++) {
+for (let i = 0; i < maxSlides; i++) {
     const div = document.createElement("div")
-    div.classList.add("index")
-    div.addEventListener("click", () => {
-        clearInterval(slideshow.slideClock)
-        slideshow.slide = i + 1
-        slideshow.setSlide()
-        slideshow.slideClock = setInterval(() => slideshow.nextSlide(), 3000)
-    })
-    progressContainer.appendChild(div)
+    div.classList.add("swiper-slide")
+    div.style.backgroundImage = `url(../banner/${i + 1}.webp)`
+    swiperWrapper.appendChild(div)
 }
-slideshow.setSlide()
 
 const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting)
-        slideshow.slideClock = setInterval(() => slideshow.nextSlide(), 3000)
-    else clearInterval(slideshow.slideClock)
+        new Swiper(".swiper", {
+            loop: true,
+            speed: 700,
+            spaceBetween: 50,
+            autoplay: {
+                delay: 1500,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true,
+            },
+        })
 })
-observer.observe(banner)
+observer.observe(swiperWrapper)

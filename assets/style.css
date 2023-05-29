@@ -207,49 +207,31 @@ section .about {
     padding: 10px;
 }
 
-.banner-container {
-    height: fit-content;
-    width: 95%;
-    max-width: 1800px;
-    margin: 0 auto;
+.swiper {
+    max-width: 1250px;
     aspect-ratio: 16/9;
+    margin: 0 auto;
+    height: auto;
 }
-
-.banner-container .banner {
-    transition: 1s ease-in-out;
-    -webkit-transition: 1s ease-in-out;
-    height: 100%;
-    width: 100%;
-    background-size: contain;
+.swiper-slide {
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
 }
 
-.banner-container .progress-container {
-    margin-top: 1rem;
-    height: 8px;
-    border-radius: 100rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+.swiper-scrollbar {
+    border-radius: 100rem !important;
+    height: 14px !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    padding: 3px;
 }
 
-.banner-container .progress-container .index {
-    height: 100%;
-    border-radius: 100rem;
-    background: rgba(255, 255, 255, 0.15);
-    width: 100%;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.banner-container .progress-container .index:hover {
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.banner-container .index-active {
+.swiper-scrollbar div {
+    border-radius: 100rem !important;
     background: white !important;
+    cursor: grab;
 }
 
 .mock-container {
@@ -499,10 +481,6 @@ footer .copyright {
         padding: 1rem;
     }
 
-    .banner-container {
-        width: 100%;
-    }
-
     .mock-container,
     .mock-container .switch,
     .mock-container .preview {
@@ -537,7 +515,10 @@ footer .copyright {
         flex-direction: column;
         gap: 1rem;
     }
-
+    .swiper-scrollbar {
+        height: 9px !important;
+        padding: 0;
+    }
     .truncate-title {
         display: none;
     }
