@@ -91,4 +91,10 @@ for (let i = 0; i < slideshow.maxSlides; i++) {
     progressContainer.appendChild(div)
 }
 slideshow.setSlide()
-slideshow.slideClock = setInterval(() => slideshow.nextSlide(), 3000)
+
+const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting)
+        slideshow.slideClock = setInterval(() => slideshow.nextSlide(), 3000)
+    else clearInterval(slideshow.slideClock)
+})
+observer.observe(banner)

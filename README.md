@@ -4,11 +4,21 @@ Unlock your online potential with our exceptional website design and development
 
 ![Bespoke Web Dev](assets/banner.png)
 
+Test Review:
+
+Stunning website design, modern, custom-made, not using any shelf templates/site builders. Amazing service.
+
+"perfectly aligns with my unique business needs"
+
+"exceptional communication and responsiveness"
+
+"attention to detail and ability to create tailor-made websites"
+
 Review 1:
 "I was blown away by the exceptional quality of the hand-coded website created by Bespoke Web Dev. Their attention to detail and commitment to customization truly sets them apart. The website they built for me not only looks stunning but also performs flawlessly. Their clear and efficient communication throughout the process made it a breeze. Highly recommended for those seeking top-notch web development!"
 
 Review 2:
-"Choosing Bespoke Web Dev was the best decision I made for my online presence. Their bespoke hand-coded approach resulted in a website that perfectly aligns with my unique business needs. Their commitment to delivering a personalized experience, coupled with their exceptional communication, made the entire process smooth and hassle-free. I couldn't be happier with the end result!"
+"Choosing Bespoke Web Dev was the best decision I made for my online presence. Their bespoke hand-coded approach resulted in a website that . Their commitment to delivering a personalized experience, coupled with their exceptional communication, made the entire process smooth and hassle-free. I couldn't be happier with the end result!"
 
 Review 3:
 "When it comes to web development, Bespoke Web Dev is in a league of their own. The attention they give to crafting hand-coded websites tailored to your specific requirements is unmatched. Their dedication to creating a website that not only looks amazing but also functions flawlessly is commendable. The team's outstanding communication and support throughout the process make them the top choice for anyone seeking a truly bespoke web development experience."
