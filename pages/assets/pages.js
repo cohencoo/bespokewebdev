@@ -578,6 +578,9 @@ const pages = {
     },
 }
 
+document.title =
+    pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()].title +
+    " | Bespoke Web Dev"
 const page = document.createElement("div")
 page.className = "page"
 page.innerHTML = html`

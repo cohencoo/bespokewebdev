@@ -422,6 +422,23 @@ footer h3 {
     color: white;
 }
 
+footer .socials {
+    display: flex;
+    gap: 10px;
+    margin: 1rem 0;
+}
+footer .socials .social {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100rem;
+    background: #0066ff;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer hr {
     border: 0;
     border-top: 1px solid #333;

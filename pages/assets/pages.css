@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
 
+body {
+    background: #eaeaea;
+}
+nav {
+    background: #222;
+    position: absolute;
+}
+
 .page {
     font-family: "Crimson Text", serif;
     font-size: 20px;
     background: white;
-    border: 2px ridge #a3a3a3;
+    border: 1.5px solid #999;
     border-radius: 0;
     padding: 6rem 5rem;
     color: black;
@@ -88,5 +96,14 @@
     .page {
         margin: 0rem;
         padding: 6rem 1.5rem 4rem 1.5rem;
+    }
+    .page .read-more {
+        padding: 3rem 0 2rem 0 !important;
+    }
+    .page .read-more h2 {
+        font-size: 1.4rem;
+    }
+    .page .read-more .links {
+        grid-gap: 1rem;
     }
 }
