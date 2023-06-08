@@ -5,11 +5,11 @@ body {
     background: #eaeaea;
 }
 nav {
-    background: #222;
+    background: black;
     position: absolute;
 }
 
-.page {
+article {
     font-family: "Crimson Text", serif;
     font-size: 20px;
     background: white;
@@ -22,7 +22,7 @@ nav {
     min-height: 100vh;
 }
 
-.page .back {
+article .back {
     font-size: 24px;
     font-weight: 600;
     color: #555;
@@ -35,31 +35,31 @@ nav {
     align-items: center;
 }
 
-.page .published {
+article .published {
     color: #555;
     font-size: 18px;
     margin: 14px 0 2rem 0;
 }
 
-.page h1 {
+article h1 {
     font-family: "Libre Baskerville", serif;
     font-size: 32px;
     font-weight: 600;
     text-transform: capitalize;
 }
 
-.page h2 {
+article h2 {
     font-size: 25px;
     font-family: "Libre Baskerville", serif;
     margin: 2rem 0 1rem 0;
 }
 
-.page li {
+article li {
     margin: 1rem 0;
     padding-left: 1.5rem;
 }
 
-.page .read-more {
+article .read-more {
     width: 100%;
     max-width: 800px;
     border-top: 1.5px solid #ddd;
@@ -69,11 +69,11 @@ nav {
     font-size: 20px;
 }
 
-.page .read-more h2 {
+article .read-more h2 {
     margin: 0 0 1rem 0;
 }
 
-.page .read-more .links {
+article .read-more .links {
     max-width: 600px;
     margin: 2rem auto 0 auto;
     display: grid;
@@ -81,7 +81,7 @@ nav {
     grid-gap: 2rem;
 }
 
-.page .read-more .links a {
+article .read-more .links a {
     display: block;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -93,17 +93,17 @@ nav {
 }
 
 @media (max-width: 800px) {
-    .page {
+    article {
         margin: 0rem;
         padding: 6rem 1.5rem 4rem 1.5rem;
     }
-    .page .read-more {
+    article .read-more {
         padding: 3rem 0 2rem 0 !important;
     }
-    .page .read-more h2 {
+    article .read-more h2 {
         font-size: 1.4rem;
     }
-    .page .read-more .links {
+    article .read-more .links {
         grid-gap: 1rem;
     }
 }

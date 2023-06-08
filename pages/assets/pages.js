@@ -1,7 +1,7 @@
 const html = String.raw
 document.head.innerHTML += html`<meta
     name="description"
-    content="Unlock your online potential with our exceptional website design and development services. Bespoke Web Dev have worked with a diverse range of clientele, creating tailored, professional & modern websites, on a local and international scale."
+    content="Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity."
 />`
 document.head.innerHTML += html`<meta
     name="keywords"
@@ -10,7 +10,7 @@ document.head.innerHTML += html`<meta
 
 document.body.innerHTML += html`<nav>
     <a style="gap: 2rem;" href="./../#">
-        <img class="logo" src="./../assets/logo.png" alt="Logo" />
+        <img class="logo" src="./../assets/logo.svg" alt="Logo" />
         <h1 class="brand">Bespoke Web Dev</h1>
     </a>
     <div class="links">
@@ -581,8 +581,7 @@ const pages = {
 document.title =
     pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()].title +
     " | Bespoke Web Dev"
-const page = document.createElement("div")
-page.className = "page"
+const page = document.createElement("article")
 page.innerHTML = html`
     <span class="back">
         Home /

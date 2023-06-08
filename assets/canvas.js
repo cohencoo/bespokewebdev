@@ -1,7 +1,7 @@
 const canvas = document.getElementById("showcase")
 const ctx = canvas.getContext("2d")
 
-const imageConfig = "png: 1-16 & webp: 1-9"
+const imageConfig = "png: 1-20 & webp: 1-9"
 
 const parseConfig = (config) => {
     const formats = config.split("&").map((item) => item.trim())
@@ -31,7 +31,7 @@ images.forEach((src) => {
 })
 
 function drawImage(imgObj) {
-    const size = window.innerWidth < 768 ? randomBetween(100, 150) : randomBetween(150, 300)
+    const size = window.innerWidth < 768 ? randomBetween(100, 150) : randomBetween(150, 260)
     const x = randomBetween(0, canvas.width - size)
     const y = randomBetween(0, canvas.height - size)
     const opacity = randomBetween(7, 9) / 10
@@ -59,7 +59,7 @@ function draw() {
 
     displayedImages.forEach((image, i) => {
         ctx.globalAlpha = image.opacity
-        ctx.drawImage(image.img, image.x, image.y, image.size, image.size / 1.6)
+        ctx.drawImage(image.img, image.x, image.y, image.size, image.size / 1.7)
 
         if (image.fade === "in") {
             image.opacity += image.fadeInSpeed
@@ -88,7 +88,7 @@ function startBanner() {
         ) {
             drawImage(imageObjects[randomBetween(0, imageObjects.length - 1)])
         }
-    }, 150)
+    }, 120)
     setTimeout(() => clearInterval(burst), 1000)
 
     setInterval(() => {

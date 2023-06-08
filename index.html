@@ -8,9 +8,11 @@
         <meta name="author" content="Cohen Coombs" />
         <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
         <link rel="stylesheet" href="assets/style.css" />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#000000" />
         <meta
             name="description"
-            content="Unlock your online potential with our exceptional website design and development services. Bespoke Web Dev have worked with a diverse range of clientele, creating tailored, professional & modern websites, on a local and international scale."
+            content="Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity."
         />
         <meta
             name="keywords"
@@ -21,31 +23,58 @@
             defer
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0"
         />
-        <link rel="stylesheet" href="assets/packages/swiper-bundle.min.css" />
         <meta property="og:title" content="Bespoke Web Design & Development Adelaide" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://bespokewebdev.com/" />
         <meta property="og:image" content="https://bespokewebdev.com/assets/banner.png" />
         <meta
             property="og:description"
-            content="Unlock your online potential with our exceptional website design and development services. Bespoke Web Dev have worked with a diverse range of clientele, creating tailored, professional & modern websites, on a local and international scale."
+            content="Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity."
         />
         <meta property="og:site_name" content="Bespoke Web Dev" />
         <meta property="og:locale" content="en_AU" />
-        <meta property="og:article:author" content="Besoke Web Dev" />
+        <meta property="og:article:author" content="Bespoke Web Dev" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bespoke Web Design & Development Adelaide" />
         <meta
             name="twitter:description"
-            content="Unlock your online potential with our exceptional website design and development services. Bespoke Web Dev have worked with a diverse range of clientele, creating tailored, professional & modern websites, on a local and international scale."
+            content="Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity."
         />
         <meta name="twitter:image" content="https://bespokewebdev.com/assets/banner.png" />
+        <link rel="stylesheet" defer href="assets/packages/swiper-bundle.min.css" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Bespoke Web Design & Development Adelaide",
+                "description": "Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity.",
+                "url": "https://bespokewebdev.com",
+                "logo": "https://bespokewebdev.com/assets/logo.png",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+61 405 495 145",
+                    "contactType": "Customer support"
+                },
+                "openingHours": "Mo-Su 08:00-18:00",
+                "sameAs": [
+                    "https://www.facebook.com/profile.php?id=100093077884327",
+                    "https://www.instagram.com/bespokewebdev",
+                    "https://www.linkedin.com/company/bespokewebdev"
+                ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "reviewCount": "10"
+                }
+            }
+        </script>
     </head>
     <body>
+        <div class="backdrop"></div>
         <nav>
             <a style="gap: 2rem;" href="#">
-                <img class="logo" src="assets/logo.png" alt="Logo" />
-                <h1 class="brand">Bespoke Web Dev</h1>
+                <img class="logo" src="assets/logo.svg" alt="Bespoke Web Dev" />
+                <h3 class="brand">Bespoke Web Dev</h3>
             </a>
             <div class="links">
                 <a href="#about">About Us</a>
@@ -63,11 +92,12 @@
         </header>
 
         <section>
-            <p style="font-size: 1.5rem; max-width: 800px;" class="about">
-                Unlock your online potential with our exceptional website design and development
-                services. <span class="brand">Bespoke Web Dev</span> have worked with a diverse
-                range of clientele, creating tailored, professional & modern websites, on a local
-                and international scale. <br /><br />
+            <p style="font-size: 1.4rem; max-width: 800px;" class="about">
+                Unleash your online potential with our exceptional website design and development
+                services. <span class="brand">Bespoke Web Dev</span> crafts captivating, tailored
+                websites that empower businesses worldwide. Our proven expertise and commitment to
+                excellence have earned the trust of diverse clientele, driving sustainable growth
+                and establishing a strong online presence. <br /><br />
                 <a class="link" style="font-size: 1.2rem;" href="pages/services.html">
                     <span class="material-symbols-rounded">arrow_forward</span>
                     Learn More in Services</a
@@ -165,9 +195,9 @@
         </section>
 
         <section style="padding: 0 5%;" id="clientele">
-            <h1 class="title">
+            <h2 class="title">
                 Our Most Recent Clients
-            </h1>
+            </h2>
 
             <div class="swiper">
                 <div class="swiper-wrapper"></div>
@@ -180,11 +210,10 @@
         <section>
             <h2 class="title">Our emphasis on <span class="brand">hand-coded</span> websites...</h2>
             <p style="max-width: 800px;" class="about">
-                We believe that hand-coded websites are superior to websites created with
-                third-party site builders. We hand-code all of our websites from scratch, allowing
-                us to create websites that are more reliable, secure, and performant. We also have
-                more control over the design and functionality of the website, allowing us to create
-                websites that are more unique and customised to your needs.
+                Unlike third-party site builders, we believe that hand-coding offers distinct
+                advantages in terms of reliability, security, and performance. By crafting websites
+                from scratch, we maintain complete control over the design and functionality,
+                resulting in unique and customized solutions that precisely meet your needs.
                 <br /><br />
                 <a class="link" href="pages/benefits.html">
                     <span class="material-symbols-rounded">arrow_forward</span>
@@ -217,13 +246,15 @@
                         src="assets/mock-mac.png"
                         style="display: block;"
                         class="mock-mac"
-                        alt=""
+                        loading="lazy"
+                        alt="Example of a website on a computer"
                     />
                     <img
                         src="assets/mock-phone.png"
                         style="display: none;"
                         class="mock-phone"
-                        alt=""
+                        loading="lazy"
+                        alt="Example of a website on a phone"
                     />
                 </div>
             </div>
@@ -248,7 +279,7 @@
             </div>
         </section>
 
-        <section id="contact" style="background: hsl(0, 0%, 8%);">
+        <section id="contact" style="background: rgba(50, 50, 50, 0.2);">
             <h2 style="font-weight: 600; font-size: 2.5rem;" class="title">
                 Contact Us <span style="font-weight: 100; color: #555;">/</span> Get a Quote
             </h2>
@@ -357,8 +388,8 @@
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
+                            width="22"
+                            height="22"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -370,6 +401,29 @@
                                 d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
                             ></path>
                         </svg>
+                        <span>Facebook</span>
+                    </a>
+                    <a
+                        class="social"
+                        target="_blank"
+                        href="https://www.instagram.com/bespokewebdev"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span>Instagram</span>
                     </a>
                     <a
                         class="social"
@@ -378,8 +432,8 @@
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
+                            width="22"
+                            height="22"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -393,6 +447,7 @@
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
+                        <span>LinkedIn</span>
                     </a>
                 </div>
 
@@ -411,11 +466,11 @@
                 <span>ABN: 43 464 545 840</span>
             </p>
         </footer>
-        <script src="assets/packages/swiper-bundle.min.js"></script>
-        <script src="assets/packages/axios.min.js"></script>
+        <script async src="assets/packages/axios.min.js"></script>
+        <script async src="assets/packages/swiper-bundle.min.js"></script>
         <script src="assets/canvas.js"></script>
         <script src="assets/main.js"></script>
-        <script defer type="text/javascript">
+        <script defer async type="text/javascript">
             ;(function (c, l, a, r, i, t, y) {
                 c[a] =
                     c[a] ||

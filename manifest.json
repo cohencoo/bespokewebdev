@@ -1,0 +1,23 @@
+{
+    "short_name": "Bespoke Web Dev",
+    "name": "Bespoke Web Dev",
+    "description": "Bespoke Web Design & Development Adelaide",
+    "icons": [
+        {
+            "src": "assets/logo.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
+        },
+        {
+            "src": "assets/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "id": "/",
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+}
