@@ -1,25 +1,4 @@
 const html = String.raw
-document.head.innerHTML += html`<meta
-    name="description"
-    content="Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity."
-/>`
-document.head.innerHTML += html`<meta
-    name="keywords"
-    content="Cohen, Coombs, Cohen Coombs, CohenCoombs, cohencoombs, cohen, coombs, cohen coombs, website, developer, freelance, website freelancer, looking for website, bespoke web dev, web, dev, web dev, bespoke web design, website design, create website, designer, graphic, design, make website, pages, page, webpage, web development, web design, website development, website design, website redesign, website maintenance, custom website development, custom website design, bespoke web dev, bespoke web development, bespoke web design, bespoke website development, bespoke website design, bespoke website redesign, bespoke website maintenance, hand-coded websites, hand-coded website development, hand-coded website design, hand-coded website redesign, hand-coded website maintenance, bespoke web development agency, bespoke web design agency, bespoke website development agency, bespoke website design agency, bespoke website redesign agency, bespoke website maintenance agency, hand-coded websites agency, hand-coded website development agency, hand-coded website design agency, hand-coded website redesign agency, hand-coded website maintenance agency"
-/>`
-
-document.body.innerHTML += html`<nav>
-    <a style="gap: 2rem;" href="./../#">
-        <img class="logo" src="./../assets/logo.svg" alt="Logo" />
-        <h1 class="brand">Bespoke Web Dev</h1>
-    </a>
-    <div class="links">
-        <a href="./../#about">About Us</a>
-        <a href="./../#clientele">Clientele</a>
-        <a href="./../#contact">Contact Us</a>
-    </div>
-</nav>`
-
 const pages = {
     benefits: {
         title:

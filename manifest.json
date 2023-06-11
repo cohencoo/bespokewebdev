@@ -2,20 +2,44 @@
     "short_name": "Bespoke Web Dev",
     "name": "Bespoke Web Dev",
     "description": "Bespoke Web Design & Development Adelaide",
+    "id": "/",
     "icons": [
         {
-            "src": "assets/logo.svg",
-            "type": "image/svg+xml",
+            "src": "assets/logo/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "assets/logo/logo.ico",
+            "type": "image/x-icon",
             "sizes": "any"
         },
         {
-            "src": "assets/logo.png",
+            "src": "assets/logo/logo-16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "assets/logo/logo-32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "assets/logo/logo-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "assets/logo/logo-512.png",
             "type": "image/png",
             "sizes": "512x512"
+        },
+        {
+            "src": "assets/logo/logo.svg",
+            "type": "image/svg+xml",
+            "sizes": "any"
         }
     ],
-    "id": "/",
-    "scope": "/",
     "start_url": "/",
     "display": "standalone",
     "theme_color": "#000000",
