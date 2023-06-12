@@ -1,4 +1,4 @@
-const maxSlides = 9
+const maxSlides = 8
 const swiperWrapper = document.querySelector(".swiper-wrapper")
 document.getElementById("copyright").innerText = new Date().getUTCFullYear()
 

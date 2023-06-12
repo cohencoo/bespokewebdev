@@ -1,12 +1,10 @@
 <img width=80 height=80 src="assets/logo/logo.svg" />
 
-<br>
-
 # Bespoke Web Dev
 
 ## Professional Website Design & Development Services
 
-Unlock your online potential with our exceptional website design and development services. Bespoke Web Dev have worked with a diverse range of clientele, creating tailored, professional & modern websites, on a local and international scale.
+Unleash your online potential with our exceptional website design and development services. Bespoke Web Dev crafts captivating, tailored websites that empower businesses worldwide. Our proven expertise and commitment to excellence have earned the trust of diverse clientele, driving sustainable growth and establishing a strong online presence.
 
 https://bespokewebdev.com
 

@@ -1,8 +1,6 @@
 const html = String.raw
 const pages = {
     benefits: {
-        title:
-            "The Power of Hand-Coded Websites: Unleashing the True Potential of Custom Development",
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <p>
@@ -76,7 +74,6 @@ const pages = {
         `,
     },
     disclaimer: {
-        title: "Disclaimer",
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <p>
@@ -121,7 +118,6 @@ const pages = {
         `,
     },
     faq: {
-        title: "Frequently Asked Questions",
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <h2>
@@ -223,7 +219,6 @@ const pages = {
         `,
     },
     services: {
-        title: "Websites That Are Tailored To Your Needs",
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <p>
@@ -377,7 +372,6 @@ const pages = {
         `,
     },
     ecommerce: {
-        title: "How we handle e-commerce integration with Stripe",
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <p>
@@ -479,7 +473,6 @@ const pages = {
         `,
     },
     operation: {
-        title: "Let's Bring Your Vision to Life: What We Need From You",
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <p>
@@ -546,7 +539,6 @@ const pages = {
         `,
     },
     thanks: {
-        title: "Thanks for your message!",
         published: "",
         content: html`
             <h2 style="font-size: 20px">
@@ -557,9 +549,6 @@ const pages = {
     },
 }
 
-document.title =
-    pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()].title +
-    " | Bespoke Web Dev"
 const page = document.createElement("article")
 page.innerHTML = html`
     <span class="back">
@@ -569,9 +558,7 @@ page.innerHTML = html`
             Head Back
         </a>
     </span>
-    <h1>
-        ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()].title}
-    </h1>
+    <h1>${document.title.split("|").shift()}</h1>
     <div class="published">
         ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
             .published}
