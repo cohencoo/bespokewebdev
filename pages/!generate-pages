@@ -2,7 +2,7 @@
 cd documents/bespokewebdev/
 
 articles=(
-  "from-sales-to-leads.html:The Honest Truth: From Leads to Sales - How Websites Contribute to Multi-Faceted Marketing Success"
+  "from-leads-to-sales.html:The Honest Truth: From Leads to Sales - How Websites Contribute to Multi-Faceted Marketing Success"
   "benefits.html:The Power of Hand-Coded Websites: Unleashing the True Potential of Custom Development"
   "disclaimer.html:Disclaimer"
   "ecommerce.html:How we handle e-commerce integration with Stripe"

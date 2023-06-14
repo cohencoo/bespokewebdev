@@ -1,6 +1,6 @@
 const html = String.raw
 const pages = {
-    "from-sales-to-leads": {
+    "from-leads-to-sales": {
         published: "Published 14th June 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <p>
@@ -673,7 +673,7 @@ page.innerHTML = html`
             <a href="operation.html">Getting Started</a>
             <a href="benefits.html">Your Benefits</a>
             <a href="services.html">Our Services</a>
-            <a href="from-sales-to-leads.html">From Sales to Leads</a>
+            <a href="from-leads-to-sales.html">From Leads to Sales</a>
             <a href="ecommerce.html">E-Commerce Integration</a>
             <a href="faq.html">FAQ</a>
         </div>
