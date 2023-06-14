@@ -68,6 +68,15 @@ for (let i = 0; i < maxSlides; i++) {
     swiperWrapper.appendChild(div)
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    for (let i = 0; i < maxSlides; i++) {
+        const div = document.createElement("div")
+        div.classList.add("swiper-slide")
+        div.style.backgroundImage = `url(../banner/${i + 1}.webp)`
+        swiperWrapper.appendChild(div)
+    }
+})
+
 const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting)
         new Swiper(".swiper", {

@@ -1,5 +1,83 @@
 const html = String.raw
 const pages = {
+    "from-sales-to-leads": {
+        published: "Published 14th June 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
+        content: html`
+            <p>
+                In today's digital age, having a website is no longer a luxury but a necessity for
+                businesses. A website serves as a powerful tool that can significantly contribute to
+                your overall marketing strategy. However, it's essential to understand that a
+                website alone is not a magic solution. It is just one facet of a multi-faceted
+                marketing approach. In this article, we'll explore the honest truth about how a
+                website fits into your broader marketing strategy and discuss effective SEO
+                techniques to make your website stand out in the competitive online landscape.
+            </p>
+
+            <h2>1. Accessibility and Convenience:</h2>
+            <p>
+                One of the primary advantages a website offers is increased accessibility. With a
+                well-designed website, potential customers can access information about your
+                products or services anytime, anywhere. Whether it's a desktop, laptop, tablet, or
+                smartphone, your website ensures that your business is available to customers around
+                the clock. This convenience factor can lead to higher engagement and potential sales
+                conversions.
+            </p>
+
+            <h2>2. Effective Branding:</h2>
+            <p>
+                Your website serves as a digital storefront, reflecting your brand's personality,
+                values, and unique selling propositions. A professionally designed website can
+                effectively communicate your brand's story, creating a lasting impression on
+                visitors. By incorporating your brand elements such as logos, colors, and tone of
+                voice consistently throughout your website, you can establish brand recognition and
+                trust among your target audience.
+            </p>
+
+            <h2>3. Customer Engagement through Social Media Integration:</h2>
+            <p>
+                To maximize the impact of your website, it's essential to integrate it with your
+                social media platforms. Social media provides a direct channel to engage with your
+                audience, build relationships, and amplify your brand's reach. By strategically
+                linking your website to your social media profiles and incorporating social sharing
+                buttons on your website, you can encourage visitors to share your content, driving
+                organic traffic and expanding your online presence.
+            </p>
+
+            <h2>4. Seamless Customer Experience:</h2>
+            <p>
+                User experience is paramount when it comes to a successful website. A
+                well-structured and intuitive website navigation ensures that visitors can easily
+                find the information they seek. Implementing responsive design techniques makes your
+                website adaptable to different devices and screen sizes, enhancing user experience
+                across platforms. Additionally, fast page loading speeds, clear call-to-action
+                buttons, and a secure checkout process contribute to a seamless customer journey,
+                increasing the likelihood of conversions and customer satisfaction.
+            </p>
+
+            <h2>5. Standing Out from the Competition:</h2>
+            <p>
+                In a digital landscape saturated with websites, it's essential to make yours stand
+                out. Search Engine Optimization (SEO) techniques play a crucial role in improving
+                your website's visibility on search engine results pages (SERPs). By conducting
+                keyword research and incorporating relevant keywords naturally into your website's
+                content, meta tags, and headings, you can enhance your website's organic search
+                rankings. Additionally, creating valuable and shareable content, such as blog posts
+                or informative articles, not only drives traffic to your website but also positions
+                you as an authority in your industry.
+            </p>
+
+            <h2>Conclusion:</h2>
+            <p>
+                While a website is undeniably a valuable asset for any business, it is just one
+                piece of the larger marketing puzzle. By combining your website with effective
+                branding, seamless customer experience, social media integration, and implementing
+                SEO techniques, you can unlock the true potential of your online presence. Embrace
+                the honest truth that a website is not a standalone solution, but rather an integral
+                part of a holistic marketing strategy that can drive sales growth, boost brand
+                recognition, and establish meaningful connections with your target audience.
+            </p>
+        `,
+    },
     benefits: {
         published: "Published on 26th May 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
@@ -549,6 +627,19 @@ const pages = {
     },
 }
 
+function estimateReadingTime(text) {
+    // Average reading speed in words per minute
+    const wordsPerMinute = 200
+
+    // Calculate the number of words in the text
+    const wordCount = text.trim().split(/\s+/).length
+
+    // Calculate the reading time in minutes
+    const readingTime = Math.ceil(wordCount / wordsPerMinute)
+
+    return readingTime
+}
+
 const page = document.createElement("article")
 page.innerHTML = html`
     <span class="back">
@@ -559,10 +650,20 @@ page.innerHTML = html`
         </a>
     </span>
     <h1>${document.title.split("|").shift()}</h1>
-    <div class="published">
+    ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
+        .published &&
+    html` <div class="published">
+        <i>
+            ${estimateReadingTime(
+                pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
+                    .content
+            )}
+            minute read</i
+        >
+        <br />
         ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
             .published}
-    </div>
+    </div>`}
     ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()].content}
     <div class="read-more">
         <h2>
@@ -572,9 +673,9 @@ page.innerHTML = html`
             <a href="operation.html">Getting Started</a>
             <a href="benefits.html">Your Benefits</a>
             <a href="services.html">Our Services</a>
+            <a href="from-sales-to-leads.html">From Sales to Leads</a>
             <a href="ecommerce.html">E-Commerce Integration</a>
             <a href="faq.html">FAQ</a>
-            <a href="disclaimer.html">Disclaimer</a>
         </div>
     </div>
 `
