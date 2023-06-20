@@ -244,6 +244,15 @@ header .mobile-only {
         font-weight: 600;
         font-size: 3rem;
     }
+    .long-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 320px) {
+    header .container h1 {
+        font-size: 2.5rem;
+    }
 }
 
 section {
@@ -594,7 +603,7 @@ footer .copyright {
     margin-top: 4rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav {
         height: 4rem;
         padding: 2rem;
@@ -609,7 +618,9 @@ footer .copyright {
     nav .links {
         display: none;
     }
+}
 
+@media (max-width: 768px) {
     section {
         padding: 2rem 5vw;
     }
@@ -668,7 +679,7 @@ footer .copyright {
     }
     .quotes {
         flex-direction: column;
-        gap: 2rem;
+        gap: 4rem;
     }
     .quotes q {
         font-size: 1.5rem;
