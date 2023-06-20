@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,900;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700;800&display=swap");
+
+:root {
+    --col-1: #ffae00;
+    --col-2: #3f72ff;
+    --col-3: #42ff45;
+    --col-4: #ff175d;
+    --col-5: #aa60ff;
+}
 
 * {
     box-sizing: border-box;
@@ -54,6 +63,12 @@ a:hover {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+del {
+    color: #ccc;
+    font-style: italic;
+    font-weight: 400;
 }
 
 button {
@@ -123,23 +138,11 @@ nav .links a:last-child {
 
 header {
     height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-}
-
-header h1 {
-    font-size: 2em;
-    margin: 0 auto;
-    font-weight: 600;
-    font-size: 4.5rem;
-    background: -webkit-linear-gradient(rgb(255, 200, 0), rgb(117, 107, 255));
-    filter: brightness(1.2);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    max-width: 1000px;
-    text-align: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 header #showcase {
@@ -150,8 +153,97 @@ header #showcase {
     height: 90vh;
     margin-top: 5rem;
     background: transparent;
-    filter: brightness(0.45);
+    filter: brightness(0.4);
     z-index: -1;
+}
+
+header .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+header .container .offer {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    width: fit-content;
+    padding: 12px 2rem;
+    border-radius: 100rem;
+    background: rgba(0, 49, 97, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    font-weight: 600;
+}
+
+header .container h1 {
+    font-size: 6.5rem;
+    font-weight: 700;
+    font-family: "Prompt", sans-serif;
+    line-height: 1.2;
+}
+
+header .container h1 #cycle {
+    color: var(--col-1);
+    display: block;
+}
+
+.drop {
+    animation: drop 0.5s ease-in-out 1;
+    opacity: 0;
+    transform: translateY(-2rem);
+}
+
+@keyframes drop {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header .desktop-only {
+    display: block;
+}
+header .mobile-only {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    header .container h1 {
+        font-size: 5rem;
+    }
+    header .container .offer {
+        border-radius: 0;
+        position: absolute;
+        width: 100vw;
+        top: 4rem;
+        left: 0;
+        font-size: 0.9rem;
+        padding: 1rem 12px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container h1 {
+        font-size: 4rem;
+    }
+    header .desktop-only {
+        display: none;
+    }
+    header .mobile-only {
+        display: inline;
+    }
+}
+
+@media (max-width: 425px) {
+    header .container h1 {
+        font-weight: 600;
+        font-size: 3rem;
+    }
 }
 
 section {
@@ -165,6 +257,27 @@ section .title {
     margin: 1rem auto 2rem auto;
     text-align: center;
     max-width: 600px;
+}
+
+section .statistic {
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+section .highlight {
+    color: white;
+    background: #ffae0020;
+    padding: 0px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+section .dot-separator {
+    color: rgba(150, 150, 150, 0.2);
+    font-size: 5rem;
+    display: block;
+    width: fit-content;
+    margin: 3rem auto;
 }
 
 section .brand {
@@ -188,9 +301,10 @@ section .about {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1.5rem;
-    max-width: 1000px;
+    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 700px;
     margin: 4rem auto 0 auto;
 }
 
@@ -198,25 +312,39 @@ section .about {
     background: rgba(200, 200, 200, 0.05);
     border: rgba(200, 200, 200, 0.15) solid 1px;
     border-radius: 8px;
-    padding: 1rem 2rem;
+    padding: 6px 2rem 1rem 2rem;
+    max-height: 90px;
+    overflow: hidden;
+    transition: 0.5s;
     align-items: center;
+    cursor: pointer;
+}
+
+.card.dropExpanded {
+    max-height: 1000px;
+}
+
+.cards .card:hover {
+    background: rgba(200, 200, 200, 0.1);
+    border: rgba(200, 200, 200, 0.2) solid 1px;
+    transform: scale(1.01);
 }
 
 .cards .card .flex {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1rem;
     margin: 5px 0 20px 0;
 }
 
-.cards .card div h3 {
-    font-size: 1.2rem;
+.cards .card .flex h3 {
+    font-size: 18px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 
-.cards .card span {
-    font-size: 3rem;
+.cards .card .flex .icon {
+    font-size: 48px;
     color: white;
     background: linear-gradient(45deg, #ffae00, #ff00d9);
     width: fit-content;
@@ -224,6 +352,10 @@ section .about {
     border-radius: 100rem;
     font-weight: 500;
     padding: 10px;
+}
+
+.cards .card .flex .dropdown {
+    font-size: 32px;
 }
 
 .swiper {
@@ -478,11 +610,6 @@ footer .copyright {
         display: none;
     }
 
-    header h1 {
-        padding: 1rem;
-        font-size: 2.5rem;
-    }
-
     section {
         padding: 2rem 5vw;
     }
@@ -493,26 +620,30 @@ footer .copyright {
 
     section .about {
         line-height: 1.8rem !important;
-        font-size: 1rem !important;
+        font-size: 1.2rem !important;
     }
 
-    .cards {
-        margin: 0;
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    section .statistic {
+        margin: 0 auto;
+    }
+
+    section .cta-info {
+        font-size: 1.2rem !important;
     }
 
     .cards .card {
         flex-direction: column;
         align-items: flex-start;
-        padding: 1rem;
+        padding: 20px 1rem;
     }
 
-    .cards .card .flex {
-        gap: 1rem;
+    .cards .card .flex .icon,
+    .cards .card .flex .dropdown {
+        font-size: 22px;
     }
-    .cards .card span {
-        font-size: 2rem;
+    .cards .card .flex h3,
+    .cards .card p {
+        font-size: 16px;
     }
 
     #clientele {
@@ -556,8 +687,5 @@ footer .copyright {
     .swiper-scrollbar {
         height: 9px !important;
         padding: 0;
-    }
-    .truncate-title {
-        display: none;
     }
 }

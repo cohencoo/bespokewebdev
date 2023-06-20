@@ -1,6 +1,15 @@
 const maxSlides = 8
 const swiperWrapper = document.querySelector(".swiper-wrapper")
+const cards = document.querySelectorAll(".card")
 document.getElementById("copyright").innerText = new Date().getUTCFullYear()
+
+cards.forEach((card, index) => {
+    if (index === 0) card.classList.add("dropExpanded")
+    card.addEventListener("click", () => {
+        cards.forEach((card) => card.classList.remove("dropExpanded"))
+        card.classList.add("dropExpanded")
+    })
+})
 
 function refEmail() {
     const formData = {
@@ -67,15 +76,6 @@ for (let i = 0; i < maxSlides; i++) {
     div.style.backgroundImage = `url(../banner/${i + 1}.webp)`
     swiperWrapper.appendChild(div)
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    for (let i = 0; i < maxSlides; i++) {
-        const div = document.createElement("div")
-        div.classList.add("swiper-slide")
-        div.style.backgroundImage = `url(../banner/${i + 1}.webp)`
-        swiperWrapper.appendChild(div)
-    }
-})
 
 const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting)
