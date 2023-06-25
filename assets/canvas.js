@@ -103,15 +103,17 @@ function startBanner() {
     updateCanvasSize()
     draw()
 
-    const burst = setInterval(() => {
-        if (
-            displayedImages.length < maxDisplayedImages &&
-            displayedImages.filter((img) => img.fade === "in").length < maxSimultaneousImages
-        ) {
-            drawImage(imageObjects[randomBetween(0, imageObjects.length - 1)])
-        }
-    }, 120)
-    setTimeout(() => clearInterval(burst), 1000)
+    if (window.innerWidth > 768) {
+        const burst = setInterval(() => {
+            if (
+                displayedImages.length < maxDisplayedImages &&
+                displayedImages.filter((img) => img.fade === "in").length < maxSimultaneousImages
+            ) {
+                drawImage(imageObjects[randomBetween(0, imageObjects.length - 1)])
+            }
+        }, 120)
+        setTimeout(() => clearInterval(burst), 1000)
+    }
 
     setInterval(() => {
         if (
