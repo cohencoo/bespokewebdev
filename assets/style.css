@@ -66,6 +66,7 @@ body {
     }
 }
 
+/* Apple shits itself when you try to use a video as a background */
 /* @media (max-width: 768px) {
     .hero-banner {
         margin: 4rem 0 8rem 0;

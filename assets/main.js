@@ -11,6 +11,19 @@ cards.forEach((card, index) => {
     })
 })
 
+if (window.innerWidth > 1024) {
+    document.querySelector(".hero-banner").innerHTML = `
+    <div class="video-container">
+        <video class="video-banner" preload="none" loop autoplay muted src="mock.mp4"></video>
+        <h2 class="hero-title">
+            No gimmicks, no outrageous fees for separating design/development phases. Just
+            brilliantly crafted
+            <span class="brand"> bespoke websites tailored to your success.</span> Period.
+        </h2>
+    </div>
+`
+}
+
 function refEmail() {
     const formData = {
         name: document.getElementById("contact-name").value,
