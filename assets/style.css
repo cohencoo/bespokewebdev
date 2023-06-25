@@ -60,7 +60,13 @@ body {
     font-weight: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .hero-banner {
+        display: none;
+    }
+}
+
+/* @media (max-width: 768px) {
     .hero-banner {
         margin: 4rem 0 8rem 0;
     }
@@ -72,7 +78,7 @@ body {
         font-size: 1.4rem;
         font-weight: 600;
     }
-}
+} */
 
 .backdrop {
     position: fixed;
