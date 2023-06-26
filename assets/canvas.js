@@ -1,5 +1,7 @@
 const canvas = document.getElementById("showcase")
 const ctx = canvas.getContext("2d")
+const icons = document.querySelectorAll(".material-symbols-rounded")
+const renderIcons = () => icons.forEach((e) => (e.style.opacity = 1))
 
 const imageConfig = "png: 1-20 & webp: 1-9"
 
