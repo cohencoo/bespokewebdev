@@ -41,6 +41,14 @@ const parseConfig = (config) => {
 }
 
 const images = parseConfig(imageConfig)
+const skipTooLarge = [
+    "./banner/19.png",
+    "./banner/1.png",
+    "./banner/3.png",
+    "./banner/20.png",
+    "./banner/17.png",
+    "./banner/9.png",
+]
 const imageObjects = []
 const displayedImages = []
 
@@ -49,6 +57,7 @@ const maxSimultaneousImages = 10
 
 const randomBetween = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 images.forEach((src) => {
+    if (window.innerWidth < 768 && skipTooLarge.includes(src)) return
     const img = new Image()
     img.src = src
     imageObjects.push(img)

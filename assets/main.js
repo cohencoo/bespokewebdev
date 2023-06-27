@@ -11,18 +11,22 @@ cards.forEach((card, index) => {
     })
 })
 
-if (window.innerWidth > 1024) {
-    document.querySelector(".hero-banner").innerHTML = `
-    <div class="video-container">
-        <video class="video-banner" preload="none" loop autoplay muted src="mock.mp4"></video>
-        <h2 class="hero-title">
-            No gimmicks, no outrageous fees for separating design/development phases. Just
-            brilliantly crafted
-            <span class="brand"> bespoke websites tailored to your success.</span> Period.
-        </h2>
-    </div>
-`
-}
+document.querySelector(".video-container").innerHTML = `<video
+        class="video-banner"
+        autoplay
+        muted
+        loop
+        defer
+        loading="lazy"
+        playsinline
+        preload="none"
+        src="mock.mp4"
+    ></video>
+    <h2 class="hero-title">
+        No gimmicks, no outrageous fees for separating design/development phases. Just brilliantly
+        crafted
+        <span class="brand"> bespoke websites tailored to your success.</span> Period.
+    </h2>`
 
 function refEmail() {
     const formData = {
