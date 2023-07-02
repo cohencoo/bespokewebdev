@@ -124,11 +124,7 @@ a:hover {
 
 .cta-flex a {
     text-decoration: none;
-}
-
-.cta-flex button {
     padding: 12px 3rem;
-    border-radius: 12px;
     font-size: 1.2rem;
     color: white;
     font-weight: 600;
@@ -153,6 +149,21 @@ button {
     font-weight: 500;
     font-family: inherit;
     font-size: inherit;
+}
+
+.button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #0066ff;
+    padding: 10px 3rem;
+    border-radius: 100rem;
+    color: white;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    display: block;
 }
 
 nav {
@@ -725,12 +736,9 @@ footer .copyright {
 
     .cta-flex a {
         width: 100%;
-    }
-
-    .cta-flex button {
         padding: 12px 1.5rem;
-        border-radius: 8px;
         font-size: 1rem;
+        border-radius: 8px;
     }
 
     .cards .card {

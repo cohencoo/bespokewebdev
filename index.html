@@ -43,7 +43,6 @@
             name="twitter:description"
             content="Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity."
         />
-        <link rel="stylesheet" defer async href="assets/packages/swiper-bundle.min.css" />
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org",
@@ -75,7 +74,12 @@
         <div class="backdrop"></div>
         <nav>
             <a style="gap: 2rem;" href="#">
-                <img class="logo" src="assets/logo/logo.svg" alt="Bespoke Web Dev" />
+                <img
+                    class="logo"
+                    src="assets/logo/logo.svg"
+                    title="Bespoke Web Dev"
+                    alt="Bespoke Web Dev"
+                />
                 <h3 class="brand">Bespoke Web Dev</h3>
             </a>
             <div class="links">
@@ -138,15 +142,15 @@
         </section>
 
         <div class="cta-flex">
-            <a href="pages/services.html">
-                <button style="border: 2px solid #ffae00; background: #ffae0020;">
-                    Explore
-                </button>
+            <a
+                class="button"
+                style="border: 2px solid #ffae00; background: #ffae0020;"
+                href="pages/services.html"
+            >
+                Explore
             </a>
-            <a href="#contact">
-                <button style="background: #ffae00; color: black;">
-                    Contact Us
-                </button>
+            <a class="button" style="background: #ffae00; color: black;" href="#contact">
+                Contact Us
             </a>
         </div>
 
@@ -291,12 +295,14 @@
                         src="assets/mock-mac.webp"
                         style="display: block;"
                         class="mock-mac"
+                        title="Example of a website on a computer"
                         alt="Example of a website on a computer"
                     />
                     <img
                         src="assets/mock-phone.webp"
                         style="display: none;"
                         class="mock-phone"
+                        title="Example of a website on a phone"
                         alt="Example of a website on a phone"
                     />
                 </div>
@@ -322,9 +328,9 @@
             </div>
         </section>
 
-        <section class="hero-banner">
+        <div class="hero-banner">
             <div class="video-container"></div>
-        </section>
+        </div>
 
         <section id="contact" style="background: rgba(50, 50, 50, 0.2);">
             <h2 style="font-weight: 600; font-size: 2.5rem;" class="title">
@@ -348,9 +354,9 @@
                     value="https://bespokewebdev.com/pages/thanks.html"
                 />
 
-                <input id="contact-name" type="name" name="name" required placeholder="Full Name" />
+                <input id="contact-name" type="text" name="name" required placeholder="Full Name" />
                 <input id="contact-email" type="email" name="email" required placeholder="Email" />
-                <input id="contact-phone" type="phone" name="phone" placeholder="Phone" />
+                <input id="contact-phone" type="tel" name="phone" placeholder="Phone" />
 
                 <input id="contact-category" type="hidden" name="category" value="Landing Page" />
                 <label for="category">What website best fits your inquiry?</label>
@@ -391,11 +397,11 @@
                     <option value="30+">30+</option>
                 </select>
 
-                <label for="proposed-budget">What is your budget?</label>
+                <label for="contact-budget">What is your budget?</label>
                 <input
                     id="contact-budget"
                     placeholder="AUD $"
-                    name="proposed-budget"
+                    name="contact-budget"
                     value="AUD $"
                 />
 
@@ -515,17 +521,21 @@
                 <span>ABN: 43 464 545 840</span>
             </p>
         </footer>
-        <script src="assets/canvas.js"></script>
+        <script type="text/javascript" src="assets/canvas.js"></script>
         <link
             rel="preload"
-            defer
-            async
             href="assets/material-symbols-rounded.css"
             as="style"
             onload="this.onload=null;this.rel='stylesheet';renderIcons()"
         />
-        <script async defer src="assets/packages/swiper-bundle.min.js"></script>
-        <script async defer src="assets/main.js"></script>
+        <link rel="stylesheet" href="assets/packages/swiper-bundle.min.css" />
+        <script
+            async
+            defer
+            type="text/javascript"
+            src="assets/packages/swiper-bundle.min.js"
+        ></script>
+        <script async defer type="text/javascript" src="assets/main.js"></script>
         <script defer async type="text/javascript">
             ;(function (c, l, a, r, i, t, y) {
                 c[a] =

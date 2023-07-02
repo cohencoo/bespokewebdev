@@ -25,7 +25,7 @@ document.querySelector(".video-container").innerHTML = `<video
     <h2 class="hero-title">
         No gimmicks, no outrageous fees for separating design/development phases. Just brilliantly
         crafted
-        <span class="brand"> bespoke websites tailored to your success.</span> Period.
+        <span style="font-weight: 600; color: #ffae00;"> bespoke websites tailored to your success.</span> Period.
     </h2>`
 
 function refEmail() {

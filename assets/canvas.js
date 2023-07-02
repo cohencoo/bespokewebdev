@@ -4,7 +4,14 @@ const icons = document.querySelectorAll(".material-symbols-rounded")
 const renderIcons = () => icons.forEach((e) => (e.style.opacity = 1))
 
 const imageConfig = "png: 1-20 & webp: 1-9"
-
+const excludedFiles = [
+    "./banner/19.png",
+    "./banner/1.png",
+    "./banner/3.png",
+    "./banner/20.png",
+    "./banner/17.png",
+    "./banner/9.png",
+]
 const tags = [
     "Stand Out",
     "Drive Sales",
@@ -34,37 +41,31 @@ const parseConfig = (config) => {
     for (const format of formats) {
         const [extension, range] = format.split(":").map((item) => item.trim())
         const [start, end] = range.split("-").map((item) => parseInt(item))
-        for (let i = start; i <= end; i++) imageList.push(`./banner/${i}.${extension}`)
+        for (let i = start; i <= end; i++) {
+            const src = `./banner/${i}.${extension}`
+            if (window.innerWidth < 768 && excludedFiles.includes(src)) continue
+            imageList.push(src)
+        }
     }
 
     return imageList
 }
 
 const images = parseConfig(imageConfig)
-const skipTooLarge = [
-    "./banner/19.png",
-    "./banner/1.png",
-    "./banner/3.png",
-    "./banner/20.png",
-    "./banner/17.png",
-    "./banner/9.png",
-]
 const imageObjects = []
 const displayedImages = []
-
 const maxDisplayedImages = 20
 const maxSimultaneousImages = 10
 
 const randomBetween = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 images.forEach((src) => {
-    if (window.innerWidth < 768 && skipTooLarge.includes(src)) return
     const img = new Image()
     img.src = src
     imageObjects.push(img)
 })
 
 function drawImage(imgObj) {
-    const size = window.innerWidth < 768 ? randomBetween(100, 150) : randomBetween(150, 260)
+    const size = window.innerWidth < 768 ? randomBetween(100, 120) : randomBetween(150, 260)
     const x = randomBetween(0, canvas.width - size)
     const y = randomBetween(0, canvas.height - size)
     const opacity = randomBetween(7, 9) / 10
@@ -110,7 +111,7 @@ function draw() {
     window.requestAnimationFrame(draw)
 }
 
-function startBanner() {
+;(function () {
     updateCanvasSize()
     draw()
 
@@ -122,7 +123,7 @@ function startBanner() {
             ) {
                 drawImage(imageObjects[randomBetween(0, imageObjects.length - 1)])
             }
-        }, 120)
+        }, 150)
         setTimeout(() => clearInterval(burst), 1000)
     }
 
@@ -134,7 +135,6 @@ function startBanner() {
             drawImage(imageObjects[randomBetween(0, imageObjects.length - 1)])
         }
     }, 300)
-}
+})()
 
 window.addEventListener("resize", updateCanvasSize)
-window.addEventListener("load", startBanner)
