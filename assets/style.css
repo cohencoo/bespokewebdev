@@ -112,26 +112,6 @@ a:hover {
     -ms-user-select: none;
 }
 
-.cta-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem auto;
-    padding: 12px;
-    max-width: 500px;
-}
-
-.cta-flex a {
-    text-decoration: none;
-    padding: 12px 3rem;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 600;
-    width: 100%;
-    cursor: pointer;
-}
-
 del {
     color: #ccc;
     font-style: italic;
@@ -161,9 +141,12 @@ button {
     color: white;
     font-weight: 500;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1.3rem;
     text-align: center;
     display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 nav {
@@ -319,6 +302,9 @@ header .mobile-only {
     header .mobile-only {
         display: inline;
     }
+    .button {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 425px) {
@@ -352,7 +338,8 @@ section .title {
 
 section .statistic {
     margin: 0 auto;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-weight: 300 !important;
 }
 
 section .highlight {
@@ -361,14 +348,6 @@ section .highlight {
     padding: 0px 5px;
     border-radius: 3px;
     font-weight: 600;
-}
-
-section .dot-separator {
-    color: rgba(150, 150, 150, 0.2);
-    font-size: 5rem;
-    display: block;
-    width: fit-content;
-    margin: 3rem auto;
 }
 
 section .brand {
@@ -478,7 +457,7 @@ section .about {
 }
 
 .mock-container {
-    background: rgba(100, 100, 100, 0.2);
+    background: rgba(100, 100, 100, 0.1);
     border-radius: 1rem;
     width: 100%;
     display: flex;
@@ -488,7 +467,7 @@ section .about {
 
 .mock-container .preview {
     width: 50%;
-    background: rgba(100, 100, 100, 0.1);
+    background: rgba(100, 100, 100, 0.05);
     border-radius: 0 1rem 1rem 0;
     padding: 1rem;
 }
@@ -590,8 +569,8 @@ form {
 form span {
     font-size: 2.5rem !important;
     font-weight: 600;
-    color: #5267ff;
-    background: #0066ff15;
+    color: var(--col-1);
+    background: #ffae0020;
     padding: 1rem;
     border-radius: 1rem;
     width: fit-content;
@@ -717,28 +696,12 @@ footer .copyright {
     }
 
     section .statistic {
+        font-size: 3rem;
         margin: 0 auto;
-    }
-
-    section .dot-separator {
-        margin: 1rem auto;
     }
 
     section .cta-info {
         font-size: 1.2rem !important;
-    }
-
-    .cta-flex {
-        padding: 1rem;
-        gap: 5px;
-        margin-top: 2rem;
-    }
-
-    .cta-flex a {
-        width: 100%;
-        padding: 12px 1.5rem;
-        font-size: 1rem;
-        border-radius: 8px;
     }
 
     .cards .card {
