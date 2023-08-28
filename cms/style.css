@@ -73,11 +73,10 @@ nav {
     padding: 2rem 5rem;
     display: flex;
     align-items: center;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent, rgba(0, 0, 0, 0.2));
     justify-content: space-between;
-    background-color: rgba(15, 15, 15, 0.3);
+    background-color: transparent;
     z-index: 100;
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
 }
 
 nav a {
@@ -133,7 +132,8 @@ header .video-banner {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    filter: brightness(0.1);
+    filter: brightness(0.12);
+    pointer-events: none;
 }
 
 header .container {
@@ -174,6 +174,29 @@ header .container p {
     margin: 0 auto 2rem auto;
 }
 
+header .container .cta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header .container .cta-container .button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #777;
+    padding: 12px 2.5rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 1.1rem;
+    text-align: center;
+    display: block;
+}
+
 header .container .headline .caret {
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 6px;
@@ -197,14 +220,45 @@ header .container .headline .caret {
 }
 
 @media (max-width: 1024px) {
+    nav {
+        padding: 2rem 5%;
+        justify-content: center;
+    }
+    nav .brand {
+        font-size: 1.2rem;
+    }
+    nav .links {
+        display: none;
+    }
+    header {
+        padding: 1rem;
+    }
+    header .container h2 {
+        display: none;
+    }
     header .container .headline {
         font-size: 5rem;
+    }
+    header .container .headline .caret {
+        display: none;
+    }
+    header .container p {
+        max-width: 600px;
+        margin: 0 auto 1rem auto;
     }
 }
 
 @media (max-width: 768px) {
     header .container .headline {
         font-size: 4rem;
+    }
+    header .container p {
+        font-size: 1.2rem;
+    }
+    header .container .cta-container {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
     }
 }
 
@@ -213,32 +267,18 @@ header .container .headline .caret {
         font-weight: 600;
         font-size: 3rem;
     }
+    header .container .cta-container .button {
+        width: 100%;
+        margin: 0 !important;
+        background: #ffb30010;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(2rem);
+        -webkit-backdrop-filter: blur(2rem);
+    }
 }
 
 @media (max-width: 320px) {
     header .container .headline {
         font-size: 2.5rem;
     }
-}
-
-section {
-    padding: 5rem 5%;
-}
-
-section .title {
-    color: white;
-    font-size: 2rem;
-    font-weight: 500;
-    margin: 1rem auto 2rem auto;
-    text-align: center;
-    max-width: 600px;
-}
-
-section .about {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 2;
-    color: #eee;
-    font-size: 1.2rem;
 }
