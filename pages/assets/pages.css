@@ -92,6 +92,15 @@ article .read-more .links a {
     transition: all 0.2s ease-in-out;
 }
 
+.banner {
+    width: 100%;
+    height: 45vh;
+    background-repeat: no-repeat;
+    background-size: 100% !important;
+    margin-bottom: 5rem;
+    box-shadow: 10px 10px 1rem rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 800px) {
     article {
         margin: 0rem;
