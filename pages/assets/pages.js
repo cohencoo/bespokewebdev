@@ -1,29 +1,34 @@
 const html = String.raw
 const pages = {
     "ato-tax-tips": {
-        published: "Published 20th October 2023 <br /> By Cohen Coombs, Bespoke Web Dev",
+        published:
+            "Published 20th October 2023 at 10:38 AM. <br /> By Cohen Coombs, Bespoke Web Dev",
         content: html`
             <div
                 class="banner"
                 style="background: url(https://www.smbaccounting.com.au/wp-content/uploads/2022/07/rsz_tax-word-in-wood-letters-on-top-of-australian-hig-2021-08-30-22-33-37-utc-1210x423.jpg)"
             ></div>
-            <i style="font-size: 1.5rem; font-family: cursive">Dear Taxpayers,</i>
+
+            <i style="font-size: 1.5rem; font-family: 'Libre Baskerville', serif;"
+                >Taxpayers beware,</i
+            >
 
             <br /><br />
 
             It’s time for you to stop working so hard, just to have your hard-earned income taxed,
-            where you could have splurged that money in making your life a better place.
+            where you could have splurged that money in making your life –– a better one.
 
             <br /><br />
 
-            This article will provide you with tips to reduce taxable income in Australia,
+            This article is your basic toolkit to help you reduce taxable income in Australia,
             considering you decide to go it alone, and do it yourself.
 
             <br /><br />
 
-            Considering this presents pros and cons, you are more likely to be audited when doing a
-            self-lodged return, however, you no longer have to pay an accountant to do something
-            you’re truly capable of doing on your own.
+            HOWEVER, your chances of a government audit increases when doing a self-lodged tax
+            return. But no need to fret, given you are an honest, organized individual. Plus, you'll
+            no longer have to hire an accountant to do something you’re truly capable of doing on
+            your own.
 
             <br /><br />
 
@@ -33,14 +38,18 @@ const pages = {
             but is required for them to fill out about 40 fields in the ATO return form. This figure
             can be longer, when going through every tax deductible item. In spite of the seemingly
             challenging task, it is quite simple, when you trust yourself and use these following
-            steps wisely. Here I’ve compiled the best 4 tax deductibles that have the potential to
-            tremendously reduce your taxable income, given you plan for it in advance, and don’t try
-            rushing these last minute prior to your return, as some of them take time and sacrifice.
+            steps wisely.
+
+            <br /><br />
+
+            Here I’ve compiled the best 4 tax deductibles that have the potential to tremendously
+            reduce your taxable income, given you plan for it in advance, and don’t try rushing
+            these last minute prior to your return, as some of them take time.
 
             <br /><br />
 
             <div
-                style="background: #FB230040; padding: 1rem; clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);"
+                style="user-select: none; background: rgba(255, 212, 84, 0.5); padding: 1rem; clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);"
             >
                 Disclaimer: This is not financial advice. This article has been written for
                 entertainment purposes only.
@@ -48,7 +57,7 @@ const pages = {
 
             <br /><br />
 
-            <h1>1. Salary Sacrifice</h1>
+            <h1>#1 – Salary Sacrifice</h1>
             This is a common way for individuals to reduce the tax burden at the end of the
             financial year, instead of having to fork out thousands of dollars to pay off what you
             owe to the ATO. Plus, you get rewarded in doing so, resulting in paying overall less
@@ -56,109 +65,133 @@ const pages = {
 
             <br /><br />
 
-            With salary sacrificing, a taxpayer would put some of their pre-tax income toward a
-            benefit before they are taxed. Some of the most common salary sacrifice benefits are
-            motor vehicles and superannuation.
+            With salary sacrificing, an employee would put some of their pre-tax income toward a
+            benefit, and forgo part of their pre-tax paycheck before they get it. Some of the most
+            common salary sacrifice benefits are for motor vehicles, superannuation, rent payments
+            and mortgage payments, these are called
+            <b>Fringe Benefits.</b>
 
             <br /><br />
 
-            Thus, an employee would forgo part of their pre-tax paycheck before they get it. For
-            example, they could use salary sacrifice to pay for a new car, computer, insurance, rent
-            payments, mortgage payments, and other benefits. These benefits are also referred to as
-            “fringe benefits,” and they can save Australians thousands of dollars in taxes every
-            year, with a few exceptions.
+            But before wholeheartedly committing to this, there is a limit on what salary can be
+            sacrificed. Fringe Benefit Taxes will legally limit what your employer can offer as
+            benefits. One common example is a novated car lease. This is an agreement between your
+            employer, a finance company, and yourself, which becomes a cost-effective and rewarding
+            way to get a new car while reducing your taxable income.
 
             <br /><br />
 
-            For one thing, there is a limit on what salary can be sacrificed. Fringe Benefits Tax,
-            or FBT, can impact the types of benefits your employer offers. For example, employers
-            will offer to salary package a car as a novated lease. This is an agreement between your
-            employer, you, and a financer, and is one way to get access to a new car while reducing
-            your taxable income.
+            <h1>#2 – Super co-contributions (aka. free money)</h1>
+
+            I don’t know why it isn’t just called free money, because it essentially is –– just not
+            for impatient people. Super co-contributions work similar to salary sacrifice, you can
+            get your employer to take out a small amount of your wage fortnightly to put towards
+            topping up your superannuation.
 
             <br /><br />
 
-            <h1>2. Super co-contributions (aka. free money)</h1>
-
-            I don’t know why it isn’t just called free money, because it essentially is, but not for
-            impatient people. Super co-contributions work similar to salary sacrifice, you can get
-            your employer to take out a small amount of your wage fortnightly to put towards topping
-            up your superannuation.
+            If you’re a low or middle-income earner, you would benefit from this incentive the most.
 
             <br /><br />
 
-            If you’re a low or middle-income earner, you could qualify for a government
-            co-contribution. This is when the government contributes to your super account if you
-            have made a contribution yourself.
+            “If you make a personal contribution of up to $1000, you can get the government to
+            contribute up to $500 to your super account,” said
+            <a href="https://www.consortiumpw.com.au/" target="_blank">Consortium Private Wealth</a>
+            principal Robert Goudie.
 
             <br /><br />
 
-            “If you make a personal [after-tax] contribution of up to $1000, you can get the
-            government to contribute up to $500 to your super account,” said Consortium Private
-            Wealth principal Robert Goudie.
+            To see how this applies to you, please refer to Figure 1, depicting what you get back as
+            wage increases, considering you contribute $1000 p/yr. To get upmost of $500 back, you
+            must contribute $1000 and <strong>earned $36,813 or less</strong> over the year.
 
             <br /><br />
 
-            To get the full $500 payment, you must have contributed $1000 and earned $41,112 or less
-            over the year.
+            <img
+                src="https://www.mlc.com.au/content/dam/mlc/images/content/superannuation/MLC_Government_banner_2018.jpg"
+                style="width: 100%; height: auto"
+            />
+            <span style="user-select: none; ">
+                Figure 1 (Source: MLC,
+                <a
+                    href="https://www.mlc.com.au/personal/superannuation/grow-your-super/government-co-contributions"
+                    target="_blank"
+                    >www.mlc.com.au</a
+                >)
+            </span>
 
             <br /><br />
 
-            This is of course beneficial later on, or would feel even better with retirement just
-            around the corner, to feel that your shaved off wage is helping your future self out.
+            This is of course beneficial later on, given you have the mentality and stability to
+            shave off a bit of your earnings to prepare for your future in advance, which I'm sure
+            you'd be thanking yourself later on.
 
             <br /><br />
 
-            This of course has positive benefits on your tax return presently, as you can now claim
-            back this entire amount in your tax return. See, free money!
+            But that's not all, as you can now claim back this entire amount in your tax return,
+            further minimizing your tax liability. And, what's better? Free money!
+
+            <br /><br />
+            So go on, help your future self out!
+            <br /><br />
+
+            <h1>#3 – Feeling generous → Donate to charity</h1>
+
+            While this sounds misleading, it kills three birds with one stone, you get to donate to
+            those in need, your moral conscience will be at ease, and whats more, you get a slight
+            percentage of it back, when claiming for the gifts/donations & expenses option in your
+            tax return.
 
             <br /><br />
 
-            This strategically depends on how much tax withheld you’ve actually accrued, if you go
-            over that amount, you won’t be getting that back.
+            To put it in perspective, instead of getting a certain percentage back from donations
+            (while most importantly helping those in need),
+            <strong>you’d get nothing back if you did not choose to donate at all.</strong>
 
             <br /><br />
 
-            <h1>3. Feeling generous → Donate to charity</h1>
-
-            While it sounds misleading, it kills two birds with one stone, you get to donate to
-            those in need (in your control), and you get a slight percentage of it back, when
-            claiming for it under gifts and expenses in your lodgement. That way, you would get more
-            back, and you would put it in the right place. If you hadn't done this, instead of just
-            getting the slightest percentage back from donations, you’d get nothing back.
+            But don’t get caught out on this one. Only donations of $2 or more to a
+            <a href="https://abr.business.gov.au/Tools/DgrListing" target="_blank"
+                >Deductible Gift Recipient</a
+            >
+            is tax deductible, given you have a receipt.
 
             <br /><br />
 
-            But don’t get caught out on this one. Donations of $2 or more to an appropriate
-            charitable organization is tax deductible if you have a receipt.
+            If you're still in doubt, check out this webinar by
+            <a
+                href="https://probonoaustralia.com.au/events/understanding-deductible-gift-recipient-dgr-status-webinar/"
+                target="_blank"
+                >Probono Australia</a
+            >, which explains Deductible Gift Recipients (DGRs) in more depth:
 
             <br /><br />
 
-            But not all deductions are equal. Donations must be made to a Deductible Gift Recipient
-            in order to be claimable. Most private donations such as Go Fund Me causes are not
-            deductible.
+            <img
+                src="https://probonoaustralia.com.au/wp-content/uploads/2021/09/TH_DGR-2-770x337.png"
+                style="width: auto; height: 15rem"
+            />
 
             <br /><br />
-
-            <h1>4. And of course, claiming as many deductions as you can.</h1>
-
-            If you spend any money on anything related to earning income, you’ll want to claim it.
-            Be sure you declare all deductions possible to pay less tax in Australia. Even things
-            that may seem small and insignificant can add up to huge savings at the end of the
-            financial year.
-
             <br /><br />
 
-            Owning an ABN will help you further, to claim your main income from your work position.
+            <h1>#4 – Claim all possible deductions!</h1>
+
+            If you spend any money on anything that helped you earn income, you’ll want to claim it.
+            Be sure you declare all deductions possible (no matter how small or insignificant), it
+            can all add up to huge savings at the end of the financial year.
 
             <br /><br />
 
             The ATO is far more likely to ask a lot of questions about your tax deductions than they
-            were a few years ago. If they ask about your deductions, you’ll need to show them
-            receipts for tax deduction claims. Unfortunately, not having a sound filing system can
-            cause a lot of headaches for your tax time. So many Australians miss deductions they can
-            legally claim because of a lack of sound record keeping. If you make this mistake, the
-            ATO will keep your hard-earned money that should have stayed in your pocket.
+            were a few years ago. If you're ever put in the spotlight, you’ll need to show them
+            receipts for each deduction you've claimed. Unfortunately, not having a sound filing
+            system can cause a lot of headaches, come tax time. If you make this mistake, the ATO
+            will keep your hard-earned income that should have stayed in your pocket.
+
+            <br /><br />
+
+            <center style="font-size: 3rem; letter-spacing: 1rem;">...</center>
 
             <br /><br />
 
@@ -168,13 +201,16 @@ const pages = {
 
             <br /><br />
 
-            But hopefully this generalized video sets you in the right direction in taking on the
-            tax avenue yourself, and manning up to do it yourself. Overall, minimizing what the
-            pesky government wants to take from your hard-earned income.
+            If you run a Business (see
+            <a href="https://abr.business.gov.au" target="_blank">ABN</a>), this will provide you
+            even more leniency in reducing your taxable income, expanding the list of tax
+            deductibles.
 
             <br /><br />
 
-            Thank you.
+            Nonetheless, I hope this generalized "how-to" sets you in the right direction in taking
+            on the tax avenue yourself. Overall, diminishing any reason for the government to take
+            from your hard-earned income as much as possible.
         `,
     },
     "from-leads-to-sales": {
