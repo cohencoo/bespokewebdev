@@ -32,19 +32,18 @@ const pages = {
 
             <br /><br />
 
-            It should be noted that a general accountant for a normal tax return (considering it is
-            for personal and/or business income) and not mortgages or capital gains, will
-            essentially ask you an entire standard list of questions. This list can be exhaustive,
-            but is required for them to fill out about 40 fields in the ATO return form. This figure
-            can be longer, when going through every tax deductible item. In spite of the seemingly
-            challenging task, it is quite simple, when you trust yourself and use these following
-            steps wisely.
+            It should be noted that a general accountant for a personal and/or business tax return
+            will essentially ask you a standard list of questions. This list can be exhaustive, but
+            is required for them to fill out about 40 fields in the ATO return form. This can take
+            longer when going through every tax deductible item. In spite of the seemingly daunting
+            'tax-time', it is a relatively streamlined process, when you trust yourself and use
+            these following steps where applicable.
 
             <br /><br />
 
             Here I’ve compiled the best 4 tax deductibles that have the potential to tremendously
-            reduce your taxable income, given you plan for it in advance, and don’t try rushing
-            these last minute prior to your return, as some of them take time.
+            reduce your tax withheld, given you plan for it in advance, and you don’t try rushing
+            these last minute prior to your return.
 
             <br /><br />
 
@@ -60,8 +59,8 @@ const pages = {
             <h1>#1 – Salary Sacrifice</h1>
             This is a common way for individuals to reduce the tax burden at the end of the
             financial year, instead of having to fork out thousands of dollars to pay off what you
-            owe to the ATO. Plus, you get rewarded in doing so, resulting in paying overall less
-            tax.
+            owe to the ATO. Plus, you get rewarded in doing so, resulting in paying less tax
+            overall.
 
             <br /><br />
 
@@ -74,19 +73,22 @@ const pages = {
             <br /><br />
 
             But before wholeheartedly committing to this, there is a limit on what salary can be
-            sacrificed. Fringe Benefit Taxes will legally limit what your employer can offer as
-            benefits. One common example is a novated car lease. This is an agreement between your
-            employer, a finance company, and yourself, which becomes a cost-effective and rewarding
-            way to get a new car while reducing your taxable income.
+            sacrificed. <strong>Fringe Benefit Taxes</strong> will legally limit what your employer
+            can offer as benefits. One common example is a
+            <a href="https://www.canstar.com.au/car-loans/novated-lease/" target="_blank"
+                >novated car lease</a
+            >. This is an agreement between your employer, a finance company, and yourself, which
+            becomes a cost-effective and rewarding way to get a new car while reducing your taxable
+            income.
 
             <br /><br />
 
             <h1>#2 – Super co-contributions (aka. free money)</h1>
 
-            I don’t know why it isn’t just called free money, because it essentially is –– just not
-            for impatient people. Super co-contributions work similar to salary sacrifice, you can
-            get your employer to take out a small amount of your wage fortnightly to put towards
-            topping up your superannuation.
+            I don’t know why the government didn't just call it 'free money', because it essentially
+            is –– just not for impatient people. Super co-contributions work similar to salary
+            sacrifice, you can get your employer to take out a small amount of your wage fortnightly
+            to put towards topping up your superannuation.
 
             <br /><br />
 
@@ -103,9 +105,7 @@ const pages = {
 
             To see how this applies to you, please refer to Figure 1, depicting what you get back as
             wage increases, considering you contribute $1000 p/yr. To get upmost of $500 back, you
-            must contribute $1000 and <strong>earned $36,813 or less</strong> over the year.
-
-            <br /><br />
+            must contribute $1000 and <strong>earn $36,813 or less</strong> over the year.
 
             <img
                 src="https://www.mlc.com.au/content/dam/mlc/images/content/superannuation/MLC_Government_banner_2018.jpg"
@@ -128,19 +128,30 @@ const pages = {
 
             <br /><br />
 
-            But that's not all, as you can now claim back this entire amount in your tax return,
-            further minimizing your tax liability. And, what's better? Free money!
+            But that's not all, as you can now <strong>claim back this entire amount</strong> in
+            your tax return, further minimizing your tax liability. And, what's better? Free money!
 
             <br /><br />
-            So go on, help your future self out!
+            <i>
+                So go on, help your future self out!
+            </i>
             <br /><br />
 
             <h1>#3 – Feeling generous → Donate to charity</h1>
 
-            While this sounds misleading, it kills three birds with one stone, you get to donate to
-            those in need, your moral conscience will be at ease, and whats more, you get a slight
-            percentage of it back, when claiming for the gifts/donations & expenses option in your
-            tax return.
+            <br />
+
+            <div style="display: flex; justify-content: center; align-items: center; gap: 3rem">
+                While this sounds irrelevant, it kills three birds with one stone, you get to donate
+                to those in need, your moral conscience will be at ease, and what's more, you get a
+                slight percentage of it back, when claiming for the gifts/donations & expenses
+                option in your tax return.
+
+                <img
+                    style="width: 30rem; height: auto; display: block"
+                    src="assets/donations.png"
+                />
+            </div>
 
             <br /><br />
 
@@ -183,11 +194,11 @@ const pages = {
 
             <br /><br />
 
-            The ATO is far more likely to ask a lot of questions about your tax deductions than they
-            were a few years ago. If you're ever put in the spotlight, you’ll need to show them
-            receipts for each deduction you've claimed. Unfortunately, not having a sound filing
-            system can cause a lot of headaches, come tax time. If you make this mistake, the ATO
-            will keep your hard-earned income that should have stayed in your pocket.
+            The ATO is far more likely to ask a lot of questions about your tax deductions in recent
+            years. If you're ever put in the spotlight, you’ll need to show them receipts for each
+            deduction you've claimed. Unfortunately, not having an organized filing system gives
+            reasonable grounds for the ATO to keep your hard-earned income that should have stayed
+            in your pocket.
 
             <br /><br />
 
@@ -201,10 +212,22 @@ const pages = {
 
             <br /><br />
 
+            Figure 2 was my tax return for 2023, showing the significance of claiming especially
+            fuel expenses.
+            <br /><br />
+
+            <img style="width: 100%; height: auto" src="assets/expenses.png" />
+            <span style="user-select: none; ">
+                Figure 2 (Source: Cohen Coombs)
+            </span>
+
+            <br /><br />
+
             If you run a Business (see
             <a href="https://abr.business.gov.au" target="_blank">ABN</a>), this will provide you
             even more leniency in reducing your taxable income, expanding the list of tax
-            deductibles.
+            deductibles. You'll also be able to claim work related overseas travel and accommodation
+            (B & E, Fig. 2).
 
             <br /><br />
 
