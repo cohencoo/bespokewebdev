@@ -231,17 +231,15 @@ const pages = {
 
             If you run a Business (see
             <a href="https://abr.business.gov.au" target="_blank">ABN</a>), this will provide you
-            even more leniency in reducing your taxable income, expanding the list of tax
+            with even more leniency in reducing your taxable income, expanding the list of tax
             deductibles. You'll also be able to claim work related overseas travel and accommodation
             (B & E, Fig. 2).
 
             <br /><br />
 
             Now it's your turn to hopefully apply these tips in lodging your next tax return for the
-            2024 FY. Your efforts will truly be paid off, when you take it step by step, despite the
-            potentially daunting task of filling in each field correctly, while taking on the tax
-            avenue yourself. Overall, diminishing any reason for the government to take from your
-            hard-earned income as much as possible.
+            2024 FY. Your efforts will truly pay off, when you take it step by step, diminishing any
+            reason for the ATO to take any more money than they need to.
 
             <br /><br />
 
