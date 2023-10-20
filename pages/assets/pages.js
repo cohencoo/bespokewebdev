@@ -57,7 +57,7 @@ const pages = {
             <br /><br />
 
             <h1>#1 – Salary Sacrifice</h1>
-            This is a common way for individuals to reduce the tax burden at the end of the
+            This is a common way for individuals to reduce their tax burden at the end of the
             financial year, instead of having to fork out thousands of dollars to pay off what you
             owe to the ATO. Plus, you get rewarded in doing so, resulting in paying less tax
             overall.
@@ -81,6 +81,7 @@ const pages = {
             becomes a cost-effective and rewarding way to get a new car while reducing your taxable
             income.
 
+            <br /><br />
             <br /><br />
 
             <h1>#2 – Super co-contributions (aka. free money)</h1>
@@ -111,7 +112,7 @@ const pages = {
                 src="https://www.mlc.com.au/content/dam/mlc/images/content/superannuation/MLC_Government_banner_2018.jpg"
                 style="width: 100%; height: auto"
             />
-            <span style="user-select: none; ">
+            <span style="user-select: none; color: #777">
                 Figure 1 (Source: MLC,
                 <a
                     href="https://www.mlc.com.au/personal/superannuation/grow-your-super/government-co-contributions"
@@ -133,8 +134,10 @@ const pages = {
 
             <br /><br />
             <i>
-                So go on, help your future self out!
+                So think about helping your future self out!
             </i>
+
+            <br /><br />
             <br /><br />
 
             <h1>#3 – Feeling generous → Donate to charity</h1>
@@ -142,13 +145,14 @@ const pages = {
             <br />
 
             <div style="display: flex; justify-content: center; align-items: center; gap: 3rem">
-                While this sounds irrelevant, it kills three birds with one stone, you get to donate
-                to those in need, your moral conscience will be at ease, and what's more, you get a
-                slight percentage of it back, when claiming for the gifts/donations & expenses
-                option in your tax return.
-
+                <span>
+                    While this sounds irrelevant, it kills three birds with one stone, you get to
+                    donate to those in need, your moral conscience will be at ease, and what's more,
+                    you get a slight percentage of it back, when claiming for
+                    <strong>"Gifts & Donations"</strong> in your tax return.
+                </span>
                 <img
-                    style="width: 30rem; height: auto; display: block"
+                    style="width: 27rem; height: auto; display: block"
                     src="assets/donations.png"
                 />
             </div>
@@ -157,7 +161,7 @@ const pages = {
 
             To put it in perspective, instead of getting a certain percentage back from donations
             (while most importantly helping those in need),
-            <strong>you’d get nothing back if you did not choose to donate at all.</strong>
+            <strong>you’d get nothing back by not donating at all.</strong>
 
             <br /><br />
 
@@ -180,11 +184,10 @@ const pages = {
 
             <img
                 src="https://probonoaustralia.com.au/wp-content/uploads/2021/09/TH_DGR-2-770x337.png"
-                style="width: auto; height: 15rem"
+                style="width: auto; height: 10rem; border-radius: 8px; border: 4px solid #777;"
             />
 
-            <br /><br />
-            <br /><br />
+            <br /><br /><br />
 
             <h1>#4 – Claim all possible deductions!</h1>
 
@@ -200,11 +203,11 @@ const pages = {
             reasonable grounds for the ATO to keep your hard-earned income that should have stayed
             in your pocket.
 
-            <br /><br />
+            <br />
 
             <center style="font-size: 3rem; letter-spacing: 1rem;">...</center>
 
-            <br /><br />
+            <br />
 
             There are also many other tax deductions that apply to specific job titles, such as work
             from home, claiming 67c per hour, electricity, internet, sun protection, laundry
@@ -212,12 +215,13 @@ const pages = {
 
             <br /><br />
 
-            Figure 2 was my tax return for 2023, showing the significance of claiming especially
-            fuel expenses.
+            The significance of claiming fuel expenses (see Fig. 2) was highly beneficial for my
+            2023 tax return, but make sure to double-check that your job title permits this.
+
             <br /><br />
 
             <img style="width: 100%; height: auto" src="assets/expenses.png" />
-            <span style="user-select: none; ">
+            <span style="user-select: none; color: #777">
                 Figure 2 (Source: Cohen Coombs)
             </span>
 
