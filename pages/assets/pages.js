@@ -25,18 +25,20 @@ const pages = {
 
             <br /><br />
 
-            HOWEVER, your chances of a government audit increases when doing a self-lodged tax
-            return. But no need to fret, given you are an honest, organized individual. Plus, you'll
-            no longer have to hire an accountant to do something you’re truly capable of doing on
-            your own.
+            <div style="padding: 1rem; border-radius: 10px; border: 3px dashed tomato;">
+                NOTE: Your chances of a government audit increases when doing a self-lodged tax
+                return. But no need to fret, given you are an honest, organized individual. Plus,
+                you'll no longer have to hire an accountant to do something you’re truly capable of
+                doing on your own.
+            </div>
 
-            <br /><br />
+            <br />
 
-            It should be noted that a general accountant for a personal and/or business tax return
-            will essentially ask you a standard list of questions. This list can be exhaustive, but
-            is required for them to fill out about 40 fields in the ATO return form. This can take
-            longer when going through every tax deductible item. In spite of the seemingly daunting
-            'tax-time', it is a relatively streamlined process, when you trust yourself and use
+            A general accountant for a personal and/or business tax return will essentially ask you
+            a standard list of questions. This list can be exhaustive, but is required for them to
+            fill out about 40 fields in the ATO return form. This can take longer when going through
+            every tax deductible item. In spite of the seemingly daunting 'tax-time', it is a
+            relatively streamlined process, when you take it step by step and trust yourself and use
             these following steps where applicable.
 
             <br /><br />
@@ -235,9 +237,15 @@ const pages = {
 
             <br /><br />
 
-            Nonetheless, I hope this generalized "how-to" sets you in the right direction in taking
-            on the tax avenue yourself. Overall, diminishing any reason for the government to take
-            from your hard-earned income as much as possible.
+            Now it's your turn to hopefully apply these tips in lodging your next tax return for the
+            2024 FY. Your efforts will truly be paid off, when you take it step by step, despite the
+            potentially daunting task of filling in each field correctly, while taking on the tax
+            avenue yourself. Overall, diminishing any reason for the government to take from your
+            hard-earned income as much as possible.
+
+            <br /><br />
+
+            Good Luck!
         `,
     },
     "from-leads-to-sales": {
