@@ -218,9 +218,14 @@ const pages = {
 
             <br /><br />
 
-            Furthermore, the significance of claiming fuel expenses (see Fig. 2) was highly
+            Furthermore, having the ability to claim fuel expenses (see Fig. 2) was highly
             beneficial for my 2023 tax return, but make sure to double-check that your job title
-            permits this.
+            permits this. See
+            <a
+                href="https://business.gov.au/finance/taxation/claim-fuel-tax-credits"
+                target="_blank"
+                >business.gov.au</a
+            >
 
             <br /><br />
 
