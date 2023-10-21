@@ -38,8 +38,8 @@ const pages = {
             a standard list of questions. This list can be exhaustive, but is required for them to
             fill out about 40 fields in the ATO return form. This can take longer when going through
             every tax deductible item. In spite of the seemingly daunting 'tax-time', it is a
-            relatively streamlined process, when you take it step by step and trust yourself and use
-            these following steps where applicable.
+            relatively streamlined process, when you take it step by step and trust yourself
+            throughout the process.
 
             <br /><br />
 
@@ -89,9 +89,9 @@ const pages = {
             <h1>#2 – Super co-contributions (aka. free money)</h1>
 
             I don’t know why the government didn't just call it 'free money', because it essentially
-            is –– just not for impatient people. Super co-contributions work similar to salary
-            sacrifice, you can get your employer to take out a small amount of your wage fortnightly
-            to put towards topping up your superannuation.
+            is –– just not for impatient people. Super co-contributions work on a similar basis as
+            salary sacrifice, you can get your employer to take out a small amount of your wage
+            fortnightly to put towards topping up your superannuation.
 
             <br /><br />
 
@@ -200,7 +200,7 @@ const pages = {
             <br /><br />
 
             The ATO is far more likely to ask a lot of questions about your tax deductions in recent
-            years. If you're ever put in the spotlight, you’ll need to show them receipts for each
+            years. If you're ever put in the spotlight, you’ll need to supply receipts for each
             deduction you've claimed. Unfortunately, not having an organized filing system gives
             reasonable grounds for the ATO to keep your hard-earned income that should have stayed
             in your pocket.
@@ -217,8 +217,9 @@ const pages = {
 
             <br /><br />
 
-            The significance of claiming fuel expenses (see Fig. 2) was highly beneficial for my
-            2023 tax return, but make sure to double-check that your job title permits this.
+            Furthermore, the significance of claiming fuel expenses (see Fig. 2) was highly
+            beneficial for my 2023 tax return, but make sure to double-check that your job title
+            permits this.
 
             <br /><br />
 
@@ -238,12 +239,13 @@ const pages = {
             <br /><br />
 
             Now it's your turn to hopefully apply these tips in lodging your next tax return for the
-            2024 FY. Your efforts will truly pay off, when you take it step by step, diminishing any
-            reason for the ATO to take any more money than they need to.
+            2024 FY. Your efforts will truly pay off in maximizing your tax return, when you take it
+            step by step, diminishing any reason for the ATO to take any more money than they need
+            to.
 
             <br /><br />
 
-            Good Luck!
+            All the best for the 2024 FY!
         `,
     },
     "from-leads-to-sales": {
