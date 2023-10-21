@@ -16,7 +16,7 @@ const pages = {
             <br /><br />
 
             It’s time for you to stop working so hard, just to have your hard-earned income taxed,
-            where you could have splurged that money in making your life –– a better one.
+            where you could have splurged that money in making your life –– <i>a better one.</i>
 
             <br /><br />
 
@@ -75,7 +75,7 @@ const pages = {
 
             But before wholeheartedly committing to this, there is a limit on what salary can be
             sacrificed. <strong>Fringe Benefit Taxes</strong> will legally limit what your employer
-            can offer as benefits. One common example is a
+            can offer as benefits. However, one common example is a
             <a href="https://www.canstar.com.au/car-loans/novated-lease/" target="_blank"
                 >novated car lease</a
             >. This is an agreement between your employer, a finance company, and yourself, which
