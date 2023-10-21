@@ -35,17 +35,16 @@ const pages = {
             <br />
 
             A general accountant for a personal and/or business tax return will essentially ask you
-            a standard list of questions. This list can be exhaustive, but is required for them to
-            fill out about 40 fields in the ATO return form. This can take longer when going through
-            every tax deductible item. In spite of the seemingly daunting 'tax-time', it is a
-            relatively streamlined process, when you take it step by step and trust yourself
-            throughout the process.
+            a standard list of questions. While this list can be exhaustive, it is required for them
+            to fill out 40 fields in the ATO return form, not including each of your tax deductible
+            items. In spite of the seemingly daunting 'tax-time', it is a relatively streamlined
+            process, when you take it step by step and trust yourself throughout the process.
 
             <br /><br />
 
-            Here I’ve compiled the best 4 tax deductibles that have the potential to tremendously
-            reduce your tax withheld, given you plan for it in advance, and you don’t try rushing
-            these last minute prior to your return.
+            Here I’ve compiled four of the best tips that have the potential to tremendously reduce
+            your tax withheld, given you plan for it in advance, and you don’t try rushing these
+            last minute prior to your return.
 
             <br /><br />
 
@@ -69,7 +68,7 @@ const pages = {
             With salary sacrificing, an employee would put some of their pre-tax income toward a
             benefit, and forgo part of their pre-tax paycheck before they get it. Some of the most
             common salary sacrifice benefits are for motor vehicles, superannuation, rent payments
-            and mortgage payments, these are called
+            and mortgage payments. These benefits are known as
             <b>Fringe Benefits.</b>
 
             <br /><br />
@@ -89,7 +88,7 @@ const pages = {
             <h1>#2 – Super co-contributions (aka. free money)</h1>
 
             I don’t know why the government didn't just call it 'free money', because it essentially
-            is –– just not for impatient people. Super co-contributions work on a similar basis as
+            is –– just not for impatient people. Super co-contributions work on a similar basis to
             salary sacrifice, you can get your employer to take out a small amount of your wage
             fortnightly to put towards topping up your superannuation.
 
@@ -106,9 +105,9 @@ const pages = {
 
             <br /><br />
 
-            To see how this applies to you, please refer to Figure 1, depicting what you get back as
-            wage increases, considering you contribute $1000 p/yr. To get upmost of $500 back, you
-            must contribute $1000 and <strong>earn $36,813 or less</strong> over the year.
+            To see how this applies to you, <i>Fig. 1</i> depicts what you get back as wage
+            increases, considering you contribute $1000 p/yr. To get upmost of $500 back, you must
+            contribute $1000 and <strong>earn $36,813 or less</strong> over the year.
 
             <img
                 src="https://www.mlc.com.au/content/dam/mlc/images/content/superannuation/MLC_Government_banner_2018.jpg"
@@ -135,8 +134,9 @@ const pages = {
             your tax return, further minimizing your tax liability. And, what's better? Free money!
 
             <br /><br />
+
             <i>
-                So think about helping your future self out!
+                So plan ahead with helping your future self out!
             </i>
 
             <br /><br />
@@ -148,9 +148,10 @@ const pages = {
 
             <div style="display: flex; justify-content: center; align-items: center; gap: 3rem">
                 <span>
-                    While this sounds irrelevant, it kills three birds with one stone, you get to
-                    donate to those in need, your moral conscience will be at ease, and what's more,
-                    you get a slight percentage of it back, when claiming for
+                    While this nice gesture sounds like the elephant in the room, it actually kills
+                    three birds with one stone, you get to donate to those in need, your moral
+                    conscience will be at ease, and what's more, you get a slight percentage of it
+                    back when claiming for
                     <strong>"Gifts & Donations"</strong> in your tax return.
                 </span>
                 <img
