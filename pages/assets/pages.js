@@ -25,7 +25,7 @@ const pages = {
 
             <br /><br />
 
-            <div style="padding: 1rem; border-radius: 10px; border: 3px dashed tomato;">
+            <div style="padding: 1rem; border-radius: 10px; border: 2px dashed tomato;">
                 NOTE: Your chances of a government audit increases when doing a self-lodged tax
                 return. But no need to fret, given you are an honest, organized individual. Plus,
                 you'll no longer have to hire an accountant to do something you’re truly capable of
