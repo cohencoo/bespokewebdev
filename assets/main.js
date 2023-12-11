@@ -33,60 +33,16 @@ document.querySelector(".video-container").innerHTML = `<video
         Period.
     </h2>`
 
-function refEmail() {
-    const formData = {
-        name: document.getElementById("contact-name").value,
-        email: document.getElementById("contact-email").value,
-        phone: document.getElementById("contact-phone").value,
-        category: document.getElementById("contact-category").value,
-        pages: document.getElementById("contact-pages").value,
-        budget: document.getElementById("contact-budget").value,
-        comment: document.getElementById("comment").value,
+document.getElementById("formsubmit").onsubmit = (e) => {
+    const phone = document.getElementById("contact-phone").value
+    if (
+        phone.length < 15 &&
+        (phone.startsWith("04") || phone.startsWith("+61") || phone.startsWith("614"))
+    ) {
+    } else {
+        e.preventDefault()
+        alert("Sorry, to avoid spam & misuse, we only accept messages within Australia.")
     }
-
-    const requestOptions = {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            subject: "Bespoke Web Dev Inquiry",
-            content: `
-          ${formData.name} sent an inquiry from Bespoke Web Dev at ${new Date().toLocaleString()}
-          <br /><br />
-          <table>
-              <tr>
-                  <td style="font-size: 1.5rem">Name:</td>
-                  <td style="font-size: 1.5rem">${formData.name}</td>
-              </tr>
-              <tr>
-                  <td style="font-size: 1.5rem">Email:</td>
-                  <td style="font-size: 1.5rem">${formData.email}</td>
-              </tr>
-              <tr>
-                  <td style="font-size: 1.5rem">Phone:</td>
-                  <td style="font-size: 1.5rem">${formData.phone}</td>
-              </tr>
-              <tr>
-                  <td style="font-size: 1.5rem">Category:</td>
-                  <td style="font-size: 1.5rem">${formData.category}</td>
-              </tr>
-              <tr>
-                  <td style="font-size: 1.5rem">Pages:</td>
-                  <td style="font-size: 1.5rem">${formData.pages}</td>
-              </tr>
-              <tr>
-                  <td style="font-size: 1.5rem">Budget:</td>
-                  <td style="font-size: 1.5rem">${formData.budget}</td>
-              </tr>
-              <tr>
-                  <td style="font-size: 1.5rem">Comment:</td>
-                  <td style="font-size: 1.5rem">${formData.comment}</td>
-              </tr>
-          </table>
-      `,
-        }),
-    }
-
-    fetch("https://visioneerlist.herokuapp.com/api/email", requestOptions).catch(() => {})
 }
 
 function updateMockup(checked) {
