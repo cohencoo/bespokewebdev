@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        #bannerCanvas {
+            width: 100%;
+            height: 100vh;
+            background-color: #999;
+        }
+    </style>
+    <body>
+        <canvas id="bannerCanvas"></canvas>
+        <script>
+            var images = [
+                "https://picsum.photos/256/256?nocache=1",
+                "https://picsum.photos/256/256?nocache=2",
+                "https://picsum.photos/256/256?nocache=3",
+                "https://picsum.photos/256/256?nocache=4",
+                "https://picsum.photos/256/256?nocache=5",
+                "https://picsum.photos/256/256?nocache=6",
+                "https://picsum.photos/256/256?nocache=7",
+                "https://picsum.photos/256/256?nocache=8",
+                "https://picsum.photos/256/256?nocache=9",
+                "https://picsum.photos/256/256?nocache=10",
+                "https://picsum.photos/256/256?nocache=11",
+                "https://picsum.photos/256/256?nocache=12",
+                "https://picsum.photos/256/256?nocache=13",
+                "https://picsum.photos/256/256?nocache=14",
+                "https://picsum.photos/256/256?nocache=15",
+                "https://picsum.photos/256/256?nocache=16",
+                "https://picsum.photos/256/256?nocache=17",
+                "https://picsum.photos/256/256?nocache=18",
+                "https://picsum.photos/256/256?nocache=19",
+                "https://picsum.photos/256/256?nocache=20",
+                "https://picsum.photos/256/256?nocache=21",
+                "https://picsum.photos/256/256?nocache=22",
+                "https://picsum.photos/256/256?nocache=23",
+                "https://picsum.photos/256/256?nocache=24",
+                "https://picsum.photos/256/256?nocache=25",
+                "https://picsum.photos/256/256?nocache=26",
+                "https://picsum.photos/256/256?nocache=27",
+                "https://picsum.photos/256/256?nocache=28",
+                "https://picsum.photos/256/256?nocache=29",
+                "https://picsum.photos/256/256?nocache=30",
+                "https://picsum.photos/256/256?nocache=31",
+                "https://picsum.photos/256/256?nocache=32",
+                "https://picsum.photos/256/256?nocache=33",
+                "https://picsum.photos/256/256?nocache=34",
+                "https://picsum.photos/256/256?nocache=35",
+                "https://picsum.photos/256/256?nocache=36",
+                "https://picsum.photos/256/256?nocache=37",
+                "https://picsum.photos/256/256?nocache=38",
+                "https://picsum.photos/256/256?nocache=39",
+                "https://picsum.photos/256/256?nocache=40",
+            ]
+
+            var canvas = document.getElementById("bannerCanvas")
+            var ctx = canvas.getContext("2d")
+            var numImages = 4
+            var imageSize = 200
+            var imageObjects = []
+
+            function drawImageWithOpacity(imageObj, opacity, x, y) {
+                ctx.globalAlpha = opacity
+
+                ctx.drawImage(imageObj, x, y, imageSize, imageSize)
+                ctx.globalAlpha = 1
+            }
+
+            function getRandomCoordinates() {
+                var x = Math.random() * (canvas.width - imageSize)
+                var y = Math.random() * (canvas.height - imageSize)
+                return { x: x, y: y }
+            }
+
+            function loadImages(images, callback) {
+                var loadedCount = 0
+
+                function loadImage(imageSrc) {
+                    var img = new Image()
+                    img.onload = function () {
+                        loadedCount++
+                        if (loadedCount === images.length) {
+                            callback()
+                        }
+                    }
+                    img.src = imageSrc
+                    return img
+                }
+
+                for (var i = 0; i < images.length; i++) {
+                    imageObjects.push(loadImage(images[i]))
+                }
+            }
+
+            function displayRandomImages() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+                for (var i = 0; i < numImages; i++) {
+                    var randomIndex = Math.floor(Math.random() * imageObjects.length)
+                    var randomImage = imageObjects[randomIndex]
+                    var coordinates = getRandomCoordinates()
+                    var opacity = 0
+
+                    function fadeIn() {
+                        opacity += 0.02
+                        if (opacity < 1) {
+                            drawImageWithOpacity(randomImage, opacity, coordinates.x, coordinates.y)
+                            requestAnimationFrame(fadeIn)
+                        } else {
+                            setTimeout(fadeOut, 2000)
+                        }
+                    }
+
+                    function fadeOut() {
+                        opacity -= 0.02
+                        if (opacity > 0) {
+                            drawImageWithOpacity(randomImage, opacity, coordinates.x, coordinates.y)
+                            requestAnimationFrame(fadeOut)
+                        } else {
+                            setTimeout(displayRandomImages, 2000)
+                        }
+                    }
+
+                    fadeIn()
+                }
+            }
+            loadImages(images, function () {
+                function setCanvasSize() {
+                    canvas.width = canvas.parentNode.clientWidth
+                    canvas.height = canvas.parentNode.clientHeight
+                }
+                setCanvasSize()
+                window.addEventListener("resize", setCanvasSize)
+                displayRandomImages()
+            })
+        </script>
+    </body>
+</html>
