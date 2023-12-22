@@ -305,6 +305,9 @@ header .mobile-only {
     .button {
         font-size: 1rem;
     }
+    .banner-awards img {
+        width: 200px !important;
+    }
 }
 
 @media (max-width: 425px) {
@@ -314,6 +317,9 @@ header .mobile-only {
     }
     .long-text {
         font-size: 0.95rem;
+    }
+    .banner-awards img {
+        width: 140px !important;
     }
 }
 
@@ -553,6 +559,22 @@ section .about {
     color: white;
     display: block;
     margin-bottom: 10px;
+}
+
+.awards {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .awards {
+        flex-direction: column;
+    }
 }
 
 form {
