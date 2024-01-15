@@ -68,8 +68,10 @@ const observer = new IntersectionObserver((entries) => {
             loop: true,
             speed: 700,
             spaceBetween: 50,
+
             autoplay: {
                 delay: 1500,
+                disableOnInteraction: true,
             },
             navigation: {
                 nextEl: ".swiper-button-next",

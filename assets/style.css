@@ -563,7 +563,7 @@ section .about {
 
 .awards {
     padding-top: 2rem;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
     background-color: black;
     display: flex;
     align-items: center;
@@ -571,8 +571,18 @@ section .about {
     gap: 4rem;
 }
 
+.flex-posts {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 0;
+    padding-bottom: 5rem;
+}
+
 @media (max-width: 768px) {
-    .awards {
+    .awards,
+    .flex-posts {
         flex-direction: column;
     }
 }
