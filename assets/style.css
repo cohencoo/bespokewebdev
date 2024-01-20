@@ -24,53 +24,6 @@ body {
     padding: 0;
 }
 
-.hero-banner {
-    margin-top: -3rem;
-    position: relative;
-    max-height: 900px;
-    overflow: hidden;
-}
-
-.video-container {
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%;
-}
-
-.video-banner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.25);
-}
-
-.hero-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 1000px;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: #fff;
-    line-height: 1.6;
-    font-weight: 700;
-}
-
-@media (max-width: 768px) {
-    .video-banner {
-        transform: scale(1.4);
-    }
-    .hero-title {
-        width: 90%;
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-}
-
 .backdrop {
     position: fixed;
     top: 0;
@@ -204,13 +157,56 @@ nav .links a:last-child {
 header {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-header #showcase {
+header .splash {
+    transition: 0.4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+header .splash .rotated {
+    animation: flip 0.7s ease-in-out infinite;
+    transform: rotate3d(0, 1, 0, 0deg);
+}
+
+@keyframes flip {
+    0% {
+        transform: rotate3d(0, 1, 0, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+}
+
+header #welcome {
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    filter: brightness(0.4);
+    z-index: -1;
+}
+
+/* header #showcase {
     position: absolute;
     top: 0;
     left: 0;
@@ -220,28 +216,12 @@ header #showcase {
     background: transparent;
     filter: brightness(0.4);
     z-index: -1;
-}
+} */
 
 header .container {
     margin: 0 auto;
     max-width: 1200px;
     text-align: center;
-}
-
-header .container .offer {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    width: fit-content;
-    padding: 12px 2rem;
-    border-radius: 100rem;
-    background: rgba(0, 49, 97, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: white;
-    font-weight: 600;
 }
 
 header .container h1 {
@@ -279,16 +259,6 @@ header .mobile-only {
 @media (max-width: 1024px) {
     header .container h1 {
         font-size: 5rem;
-    }
-    header .container .offer {
-        border-radius: 0;
-        position: absolute;
-        width: 100vw;
-        top: 4rem;
-        left: 0;
-        font-size: 0.9rem;
-        padding: 1rem 12px;
-        font-weight: 500;
     }
 }
 
@@ -573,7 +543,6 @@ section .about {
 
 .flex-posts {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     gap: 2rem;
     padding-top: 0;
@@ -584,6 +553,53 @@ section .about {
     .awards,
     .flex-posts {
         flex-direction: column;
+    }
+}
+
+.hero-banner {
+    margin-top: -3rem;
+    position: relative;
+    max-height: 900px;
+    overflow: hidden;
+}
+
+.video-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+.video-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.25);
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .video-banner {
+        transform: scale(1.4);
+    }
+    .hero-title {
+        width: 90%;
+        font-size: 1.4rem;
+        font-weight: 600;
     }
 }
 

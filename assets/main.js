@@ -1,4 +1,5 @@
 const maxSlides = 8
+const welcome = document.querySelector("#welcome")
 const swiperWrapper = document.querySelector(".swiper-wrapper")
 const cards = document.querySelectorAll(".card")
 document.getElementById("copyright").innerText = new Date().getUTCFullYear()
@@ -10,6 +11,18 @@ cards.forEach((card, index) => {
         card.classList.add("dropExpanded")
     })
 })
+
+// welcome.onended = () => { }
+if (window.innerWidth < 1024) welcome.src = "bwd-p.mp4"
+
+function removeSplash() {
+    const splash = document.querySelector(".splash")
+    splash.style.opacity = 0
+    setTimeout(() => (splash.style.display = "none"), 400)
+}
+
+welcome.onloadeddata = removeSplash
+welcome.onplaying = removeSplash
 
 document.querySelector(".video-container").innerHTML = `<video
         class="video-banner"

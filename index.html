@@ -93,17 +93,33 @@
         </nav>
 
         <header>
-            <canvas id="showcase"></canvas>
-            <div class="container">
-                <!-- <div class="offer">
-                    <span style="opacity: 0;" class="material-symbols-rounded">info</span>
-                    <div>
-                        Limited Time: Landing Page Development 40% off
-                        <del>$600</del>
-                        <a href="#contact">Contact Us</a>
+            <!-- <canvas id="showcase"></canvas> -->
+            <div class="splash">
+                <div style="margin-top: -6rem;">
+                    <img
+                        src="assets/loader/bwd.svg"
+                        alt="Loading..."
+                        style="scale: 0.7; width: 8rem; height: auto; position: absolute;"
+                    />
+                    <div class="rotated">
+                        <img
+                            src="assets/loader/loading.svg"
+                            alt="Loading..."
+                            style="width: 8rem; height: auto;"
+                        />
                     </div>
-                </div> -->
-
+                </div>
+            </div>
+            <video
+                src="bwd-l.mp4"
+                muted
+                id="welcome"
+                autoplay
+                playsinline
+                loop
+                preload="none"
+            ></video>
+            <div class="container">
                 <div
                     class="banner-awards"
                     style="display: flex; align-items: center; gap: 2rem; justify-content: center;"
@@ -132,24 +148,7 @@
             </div>
         </header>
 
-        <!-- <section style="padding: 0;">
-            <a
-                style="display: block; width: 100%; max-width: 1200px; margin: 0 auto 5rem auto;"
-                target="_blank"
-                href="https://techbehemoths.com/awards-2023/web-design/australia"
-            >
-                <img
-                    src="banner-award-2023-64929-long.png"
-                    style="
-                        width: 100%;
-                        height: auto;
-                        border-radius: 1rem;
-                        box-shadow: 1px 1px 5rem #a0781b70;
-                    "
-                    alt="awards-2023"
-                />
-            </a>
-        </section> -->
+        <br /><br />
 
         <section style="padding: 0 5%;">
             <h2 hidden class="title">
@@ -384,7 +383,7 @@
 
         <section style="padding-top: 2rem; padding-bottom: 8rem;">
             <center>
-                <img src="google.png" style="width: auto; height: 100px;" alt="" />
+                <img src="assets/google.png" style="width: auto; height: 100px;" alt="" />
             </center>
             <br /><br />
             <h2 class="title separator">The quality speaks for itself, and so do our clients.</h2>
@@ -655,7 +654,11 @@
                 <span>ABN: 43 464 545 840</span>
             </p>
         </footer>
-        <script src="assets/canvas.js"></script>
+        <!-- <script src="assets/canvas.js"></script> -->
+        <script>
+            const icons = document.querySelectorAll(".material-symbols-rounded")
+            const renderIcons = () => icons.forEach((e) => (e.style.opacity = 1))
+        </script>
         <link
             rel="preload"
             href="assets/material-symbols-rounded.css"
