@@ -148,86 +148,37 @@
             </div>
         </header>
 
-        <section style="padding: 0 5%;">
-            <h2 hidden class="title">
-                <span class="highlight statistic">71%</span>
+        <div style="height: 150vh;">
+            <div class="ctaSection">
+                <canvas id="showcase"></canvas>
+                <div>
+                    <h2 class="title">
+                        Get a FREE Mockup, designed for your business.
+                    </h2>
 
-                <p
-                    style="
-                        color: #ddd;
-                        text-transform: uppercase;
-                        font-size: 1.2rem;
-                        margin: 1rem 0 0 0;
-                        padding-top: 1rem;
-                        border-top: 2px solid rgba(50, 50, 50, 0.4);
-                    "
-                >
-                    of businesses have a website in 2023.
-                    <a
-                        target="_blank"
-                        style="vertical-align: middle;"
-                        href="https://www.forbes.com/advisor/business/software/website-statistics/"
-                        >[^1]</a
-                    >
-                </p>
-            </h2>
+                    <br /><br />
 
-            <h2
-                style="
-                    line-height: 1.5;
-                    font-style: italic;
-                    margin: 0 auto 6rem auto;
-                    font-weight: 300;
-                "
-                class="title cta-info"
-            >
-                <span
-                    style="
-                        opacity: 0;
-                        background: #ffae0020;
-                        color: #fff;
-                        padding: 1rem;
-                        font-weight: 300;
-                        border-radius: 1.5rem;
-                        display: block;
-                        margin: 2rem auto 1rem auto;
-                        width: fit-content;
-                        height: fit-content;
-                    "
-                    class="material-symbols-rounded statistic"
-                    >storefront</span
-                >
-                Businesses thrive with a website.
-                <br />
-                But businesses with a <span class="brand">Bespoke</span> website go
-                <span class="highlight">above and beyond.</span>
-            </h2>
+                    <h2>Simply send us your business info.</h2>
 
-            <p
-                style="font-size: 1.4rem; max-width: 830px; margin: 3rem auto 2rem auto;"
-                class="about"
-            >
-                <a class="link" href="pages/services.html">
-                    <span style="opacity: 0;" class="material-symbols-rounded">arrow_forward</span>
-                    What are Bespoke Websites?</a
-                >
-                <br /><br /><br />
-                <span class="brand">Bespoke Web Dev</span> creates captivating, tailored websites
-                for businesses worldwide. Our expertise and commitment to excellence have earned the
-                trust of diverse clientele, fostering growth and a strong online presence.
-            </p>
-            <a
-                class="button"
-                style="background: #ffae00; color: black; margin-bottom: 3rem;"
-                href="#contact"
-                >Contact Us
-            </a>
-        </section>
+                    <a class="cta" href="mailto:cohencoombs@outlook.com">
+                        <button>
+                            <span
+                                style="opacity: 0; font-size: 2rem;"
+                                class="material-symbols-rounded"
+                                >chat</span
+                            >
+                            Get in touch now
+                        </button>
+                    </a>
+
+                    <h2>Satisfied with the sample?</h2>
+                    <h2>We'll work together to tailor and launch it for success.</h2>
+                </div>
+            </div>
+        </div>
 
         <section id="about">
-            <h2 class="title">
-                Why choose <span class="brand">Bespoke Web Dev</span> for your next website?
-            </h2>
+            <h2 class="title">Why go <span class="brand">Bespoke Web Dev</span>?</h2>
             <div class="cards">
                 <div class="card">
                     <div class="flex">
@@ -314,10 +265,7 @@
         </section>
 
         <section style="padding: 0 5%;" id="clientele">
-            <h2 class="title">
-                Our Most Recent Clients
-            </h2>
-
+            <h2 class="title">Our Client Portfolio</h2>
             <div class="swiper">
                 <div class="swiper-wrapper"></div>
                 <div class="swiper-button-prev"></div>
@@ -380,13 +328,11 @@
         </section>
 
         <section style="padding-top: 2rem; padding-bottom: 8rem;">
-            <center>
-                <img
-                    src="assets/google.png"
-                    style="width: auto; height: 100px;"
-                    alt="Rated 5-stars on Google"
-                />
-            </center>
+            <img
+                src="assets/google.png"
+                style="width: auto; height: 100px; margin: 0 auto; display: block;"
+                alt="Rated 5-stars on Google"
+            />
             <br /><br />
             <h2 class="title separator">The quality speaks for itself, and so do our clients.</h2>
             <br />
@@ -650,7 +596,7 @@
                 <span>ABN: 43 464 545 840</span>
             </p>
         </footer>
-        <!-- <script src="assets/canvas.js"></script> -->
+        <script src="assets/canvas.js"></script>
         <script>
             const icons = document.querySelectorAll(".material-symbols-rounded")
             const renderIcons = () => icons.forEach((e) => (e.style.opacity = 1))

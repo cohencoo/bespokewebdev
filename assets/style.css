@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700;800&display=swap");
 
 :root {
     --col-1: #ffae00;
@@ -163,7 +163,6 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 8rem;
 }
 
 header .splash {
@@ -204,21 +203,9 @@ header #welcome {
     width: 100%;
     height: 100%;
     background: transparent;
-    filter: brightness(0.4);
+    filter: brightness(0.45);
     z-index: -1;
 }
-
-/* header #showcase {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90vh;
-    margin-top: 5rem;
-    background: transparent;
-    filter: brightness(0.4);
-    z-index: -1;
-} */
 
 header .container {
     margin: 0 auto;
@@ -228,7 +215,7 @@ header .container {
 
 header .container h1 {
     font-size: 6.5rem;
-    font-weight: 700;
+    font-weight: 400;
     font-family: "Prompt", sans-serif;
     line-height: 1.2;
 }
@@ -236,10 +223,11 @@ header .container h1 {
 header .container h1 #cycle {
     color: var(--col-1);
     display: block;
+    font-weight: 700;
 }
 
 .drop {
-    animation: drop 0.5s ease-in-out 1;
+    animation: drop 0.5s;
     opacity: 0;
     transform: translateY(-2rem);
 }
@@ -298,6 +286,84 @@ header .mobile-only {
 @media (max-width: 320px) {
     header .container h1 {
         font-size: 2.5rem;
+    }
+}
+
+.ctaSection {
+    position: sticky;
+    top: 5rem;
+    max-width: 2600px;
+    width: 100vw;
+    max-height: fit-content;
+    padding: 0 5%;
+    margin: 5rem auto 0 auto;
+    overflow: hidden;
+}
+
+.ctaSection canvas {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.2);
+    background: black;
+    border-radius: 2rem;
+    z-index: -1;
+}
+
+.ctaSection div {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    padding: 0 20%;
+    text-align: center;
+}
+
+.ctaSection div .title {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #ffae00, #ff00d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ctaSection div h2 {
+    font-weight: 400;
+    color: white;
+}
+
+.ctaSection div .cta {
+    margin: 3rem auto;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.ctaSection div .cta button {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 100rem;
+}
+
+@media (max-width: 1024px) {
+    .ctaSection {
+        height: 80vh;
+    }
+    .ctaSection div {
+        padding: 5rem 10%;
+    }
+    .ctaSection div .title {
+        font-size: 2.5rem;
+    }
+    .ctaSection div h2 {
+        font-size: 1.2rem;
+    }
+    .ctaSection div i {
+        display: none;
+    }
+    .ctaSection div .cta {
+        font-size: 1rem;
     }
 }
 

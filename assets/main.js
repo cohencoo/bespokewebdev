@@ -4,6 +4,28 @@ const swiperWrapper = document.querySelector(".swiper-wrapper")
 const cards = document.querySelectorAll(".card")
 document.getElementById("copyright").innerText = new Date().getUTCFullYear()
 
+const tags = [
+    "Stand Out",
+    "Drive Sales",
+    "Boost Engagement",
+    "Make An Impact",
+    "Be Memorable",
+    "Inspire Action",
+]
+const cycle = document.getElementById("cycle")
+let cycleIndex = 1
+
+const setTag = () => {
+    cycle.classList.add("drop")
+    cycle.innerHTML = tags[cycleIndex]
+    cycle.style.color = `var(--col-${cycleIndex})`
+    cycleIndex++
+    if (cycleIndex == tags.length) cycleIndex = 1
+    setTimeout(() => cycle.classList.remove("drop"), 400)
+}
+setTag()
+setInterval(setTag, 2200)
+
 cards.forEach((card, index) => {
     if (index === 0) card.classList.add("dropExpanded")
     card.addEventListener("click", () => {
@@ -47,7 +69,7 @@ document.querySelector(".video-container").innerHTML = `<video
     </h2>`
 
 document.getElementById("formsubmit").onsubmit = (e) => {
-    const phone = document.getElementById("contact-phone").value
+    const phone = document.getElementById("contact-phone").value.replace(/[^0-9+]/g, "")
     if (
         phone.length < 15 &&
         (phone.startsWith("04") || phone.startsWith("+61") || phone.startsWith("614"))

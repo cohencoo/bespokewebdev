@@ -10,27 +10,6 @@ const excludedFiles = [
     "./banner/17.png",
     "./banner/9.png",
 ]
-const tags = [
-    "Stand Out",
-    "Drive Sales",
-    "Boost Engagement",
-    "Make An Impact",
-    "Be Memorable",
-    "Inspire Action",
-]
-const cycle = document.getElementById("cycle")
-let cycleIndex = 1
-
-const setTag = () => {
-    cycle.classList.add("drop")
-    cycle.innerHTML = tags[cycleIndex]
-    cycle.style.color = `var(--col-${cycleIndex})`
-    cycleIndex++
-    if (cycleIndex == tags.length) cycleIndex = 1
-    setTimeout(() => cycle.classList.remove("drop"), 500)
-}
-setTag()
-setInterval(setTag, 2200)
 
 const parseConfig = (config) => {
     const formats = config.split("&").map((item) => item.trim())
