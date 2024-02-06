@@ -595,11 +595,9 @@ section .about {
     width: 100vw;
 }
 
-.flex-posts iframe {
-    border: none;
-    overflow: hidden;
+.flex-posts img {
     width: 500px;
-    height: 505px;
+    height: 500px;
 }
 
 @media (max-width: 768px) {
@@ -613,13 +611,14 @@ section .about {
     }
 
     .flex-posts iframe {
-        scale: 0.9;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
     }
 }
 
 @media (max-width: 425px) {
     .flex-posts iframe {
-        scale: 0.7;
         margin-top: -5rem;
         margin-bottom: -2.5rem;
     }
@@ -757,7 +756,7 @@ footer {
     background-color: rgba(150, 150, 150, 0.08);
     border-top: 1px solid #333;
     padding: 3rem 12vw 5rem 12vw;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 footer h3 {

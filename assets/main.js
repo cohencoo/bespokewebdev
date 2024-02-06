@@ -40,15 +40,11 @@ document.querySelector(".video-container").innerHTML = `<video
         class="video-banner"
         autoplay
         muted
+        src="assets/mock.mp4"
         loop
-        defer
-        loading="lazy"
-        poster="assets/mock.png"
-        playsinline
         preload="none"
-    >
-        <source src="assets/mock.mp4" type="video/mp4" />
-    </video>
+        playsinline
+    ></video>
     <h2 class="hero-title">
         No gimmicks, no outrageous fees for separating design/development phases. Just brilliantly
         crafted
