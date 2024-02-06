@@ -38,7 +38,7 @@
         <meta property="og:locale" content="en_AU" />
         <meta property="og:article:author" content="Bespoke Web Dev" />
         <meta property="article:publisher" content="https://bespokewebdev.com/" />
-        <meta property="article:modified_time" content="2024-01-15T23:50:08+00:00" />
+        <meta property="article:modified_time" content="2024-02-04T23:50:08+00:00" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bespoke Web Design & Development Adelaide" />
         <meta name="twitter:image" content="https://bespokewebdev.com/assets/banner.png" />
@@ -93,9 +93,8 @@
         </nav>
 
         <header>
-            <!-- <canvas id="showcase"></canvas> -->
             <div class="splash">
-                <div style="margin-top: -6rem;">
+                <div>
                     <img
                         src="assets/loader/bwd.svg"
                         alt="Loading..."
@@ -110,14 +109,23 @@
                     </div>
                 </div>
             </div>
+            <script>
+                function removeSplash() {
+                    const splash = document.querySelector(".splash")
+                    splash.style.opacity = 0
+                    setTimeout(() => (splash.style.display = "none"), 400)
+                }
+            </script>
             <video
                 src="bwd-l.mp4"
                 muted
+                onloadeddata="removeSplash()"
+                onplaying="removeSplash()"
                 id="welcome"
+                preload="none"
                 autoplay
                 playsinline
                 loop
-                preload="none"
             ></video>
             <div class="container">
                 <div
@@ -148,33 +156,23 @@
             </div>
         </header>
 
-        <div style="height: 140vh;">
-            <div class="ctaSection">
-                <canvas id="showcase"></canvas>
-                <div>
-                    <h2 class="title">
-                        Get a FREE Mockup, designed for your business.
-                    </h2>
+        <div class="ctaSection">
+            <h2 class="title">Get a FREE Mockup, designed for your business.</h2>
 
-                    <br /><br />
+            <p>
+                <b>Simply send us your business info.</b>
+                <br />
+                Satisfied with the sample? We'll work together to tailor and launch it for success.
+            </p>
 
-                    <h2>Simply send us your business info.</h2>
-
-                    <a class="cta" href="mailto:cohencoombs@outlook.com">
-                        <button>
-                            <span
-                                style="opacity: 0; font-size: 2rem;"
-                                class="material-symbols-rounded"
-                                >chat</span
-                            >
-                            Get in touch now
-                        </button>
-                    </a>
-
-                    <h2>Satisfied with the sample?</h2>
-                    <h2>We'll work together to tailor and launch it for success.</h2>
-                </div>
-            </div>
+            <a class="cta" href="mailto:cohencoombs@outlook.com">
+                <button>
+                    <span style="opacity: 0; font-size: 1.5rem;" class="material-symbols-rounded"
+                        >chat</span
+                    >
+                    Get in touch now
+                </button>
+            </a>
         </div>
 
         <section id="about">
@@ -594,7 +592,6 @@
                 <span>ABN: 43 464 545 840</span>
             </p>
         </footer>
-        <script src="assets/canvas.js"></script>
         <script>
             const icons = document.querySelectorAll(".material-symbols-rounded")
             const renderIcons = () => icons.forEach((e) => (e.style.opacity = 1))
