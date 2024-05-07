@@ -173,7 +173,7 @@ header .splash {
     width: 100%;
     height: calc(100% - 5rem);
     margin-top: 5rem;
-    background: black;
+    background: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -335,13 +335,15 @@ header .mobile-only {
         position: static;
         height: fit-content;
         margin: 0 auto 3rem auto;
-        padding: 1rem;
-        background-color: #111;
+        padding: 2rem;
+        background: #fff;
+        color: black;
+        text-align: center;
         display: block;
         border-top: 0;
     }
     .ctaSection .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
         width: 100%;
         margin: 2rem 0;
     }
