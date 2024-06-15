@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Minecraft</title>
+        <link
+            rel="shortcut icon"
+            href="https://www.minecraft.net/content/dam/minecraftnet/franchise/component-library/anniversaryHub/textBannerB/dirtblock.jpg"
+            type="image/x-icon"
+        />
 
         <script type="text/javascript">
             "use strict"
@@ -12,7 +17,6 @@
                 var progressPanel = null
                 var progressStr1 = null
                 var progressStr2 = null
-                var progressStr3 = null
                 var progressBarOuter = null
                 var progressBarInner = null
                 var currentXHR = null
@@ -184,6 +188,7 @@
                     if (progressPanel != null) {
                         progressPanel.remove()
                         progressPanel = null
+                        keepClean()
                     }
                     var objURL = URL.createObjectURL(
                         new Blob([arrayBuffer], { type: "text/javascript;charset=utf-8" })
@@ -203,12 +208,21 @@
                         )
                         var progressPanelInner = document.createElement("div")
                         progressPanelInner.setAttribute("style", "margin:auto;text-align:center;")
-                        var progressPanelIconContainer = document.createElement("h2")
-                        progressPanelInner.appendChild(progressPanelIconContainer)
+
+                        var logo = document.createElement("img")
+                        logo.setAttribute(
+                            "src",
+                            "https://25.media.tumblr.com/c12f9caf18f6975c2e87c9e486810738/tumblr_mpqgrlFsqk1rpm29co1_1280.gif"
+                        )
+                        logo.setAttribute(
+                            "style",
+                            "height: 80px; border-radius: 8px; margin-bottom: 10px;"
+                        )
+                        progressPanelInner.appendChild(logo)
+
                         progressStr1 = document.createElement("h1")
-                        progressStr1.innerText = "Please Wait..."
                         progressPanelInner.appendChild(progressStr1)
-                        progressStr2 = document.createElement("h3")
+                        progressStr2 = document.createElement("h2")
                         progressPanelInner.appendChild(progressStr2)
                         progressBarOuter = document.createElement("div")
                         progressBarOuter.setAttribute(
@@ -222,11 +236,7 @@
                         )
                         progressBarOuter.appendChild(progressBarInner)
                         progressPanelInner.appendChild(progressBarOuter)
-                        progressStr3 = document.createElement("h5")
-                        progressPanelInner.appendChild(progressStr3)
-                        var buttonContainer = document.createElement("p")
-                        buttonContainer.setAttribute("style", "margin-bottom:20vh;")
-                        progressPanelInner.appendChild(buttonContainer)
+
                         progressPanel.appendChild(progressPanelInner)
                         document.getElementById(opts.container).appendChild(progressPanel)
                     }
@@ -238,7 +248,7 @@
 
                 function updateProgressBar(str2, str3, prog) {
                     progressStr2.innerText = str2
-                    // progressStr3.innerText = str3;
+
                     if (prog < 0) {
                         progressBarInner.style.width = "0%"
                         progressBarOuter.style.border = "2px solid transparent"
@@ -375,8 +385,8 @@
                     opts.gzip = window.__eaglercraftLoaderClient.gzip
 
                     initProgressScreen()
-                    updateProgressScreen("Minecraft 1.8")
-                    updateProgressBar("Please wait...", "", -1)
+                    updateProgressScreen("Minecraft 1.8.8")
+                    updateProgressBar("Loading...", "", -1)
 
                     if (!window.indexedDB) {
                         console.error("IndexedDB not supported, downloading client directly...")
@@ -477,6 +487,23 @@
                     }
                 })
             })()
+
+            function keepClean() {
+                const observer = new MutationObserver((mutations) => {
+                    mutations.forEach((mutation) => {
+                        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+                            mutation.addedNodes.forEach((node) => {
+                                if (node.nodeType === Node.ELEMENT_NODE && node.tagName === "H1") {
+                                    node.remove()
+                                }
+                            })
+                        }
+                    })
+                })
+
+                const observerConfig = { childList: true, subtree: true }
+                observer.observe(document.body, observerConfig)
+            }
 
             window.__eaglercraftLoaderClient = {
                 container: "game_frame",
