@@ -13,6 +13,35 @@
         <script type="text/javascript">
             "use strict"
             ;(function () {
+                const splash = document.createElement("div")
+
+                const originalConsoleLog = console.info
+                const logMessages = []
+
+                console.info = function (...args) {
+                    if (args.toString().includes("starting")) {
+                        setTimeout(() => {
+                            splash.id = "booting-splash"
+                            splash.innerHTML = `
+                        
+                        <h1>Launching Minecraft...</h1>
+                        <img style="width: 300px; height: auto;" src="https://www.9minecraft.net/wp-content/uploads/2024/01/Armadillo-Mob-Minecraft-Tutorial.gif" />
+
+                        <h3 id="prompt-click">Please press any key to continue...</h3>
+                        
+                        `
+                            document.body.appendChild(splash)
+                        }, 0)
+                    }
+
+                    logMessages.push(args.toString())
+                    originalConsoleLog.apply(console, args)
+                }
+
+                window.getLogMessages = function () {
+                    return logMessages
+                }
+
                 const opts = {}
                 var progressPanel = null
                 var progressStr1 = null
@@ -83,7 +112,7 @@
                         xhr.responseType = "arraybuffer"
                         xhr.addEventListener("progress", (evt) => {
                             updateProgressBar(
-                                "Update: " +
+                                "Update Available: " +
                                     Math.round(evt.loaded * 0.001) +
                                     " / " +
                                     Math.round(opts.dlSize * 0.001) +
@@ -95,7 +124,7 @@
                         xhr.addEventListener("readystatechange", (evt) => {
                             if (xhr.readyState === XMLHttpRequest.DONE) {
                                 updateProgressBar(
-                                    "Update: " +
+                                    "Update Available: " +
                                         Math.round(opts.dlSize * 0.001) +
                                         " / " +
                                         Math.round(opts.dlSize * 0.001) +
@@ -147,7 +176,7 @@
                             ipfsPath
                         )
                         updateProgressBar(
-                            "Update: 0 / " + Math.round(opts.dlSize * 0.001) + " kB",
+                            "Update Available: 0 / " + Math.round(opts.dlSize * 0.001) + " kB",
                             url,
                             0.0
                         )
@@ -175,7 +204,7 @@
                                 throw "Return value from tryDownloadURL is undefined"
                             }
                         } catch (ex) {
-                            updateProgressBar("Client download failed!", url, 1.0)
+                            updateProgressBar("Attempting update...", url, 1.0)
                             console.error("Caught exception during download: " + url)
                             console.error(ex)
                         }
@@ -204,7 +233,7 @@
                         progressPanel = document.createElement("div")
                         progressPanel.setAttribute(
                             "style",
-                            "margin:0px;width:100%;height:100%;font-family:sans-serif;display:flex;align-items:center;user-select:none;"
+                            "margin:0px;width:100%;height:100%;display:flex;align-items:center;user-select:none;"
                         )
                         var progressPanelInner = document.createElement("div")
                         progressPanelInner.setAttribute("style", "margin:auto;text-align:center;")
@@ -212,12 +241,9 @@
                         var logo = document.createElement("img")
                         logo.setAttribute(
                             "src",
-                            "https://25.media.tumblr.com/c12f9caf18f6975c2e87c9e486810738/tumblr_mpqgrlFsqk1rpm29co1_1280.gif"
+                            "https://www.9minecraft.net/wp-content/uploads/2024/01/Armadillo-Mob-Minecraft-Tutorial.gif"
                         )
-                        logo.setAttribute(
-                            "style",
-                            "height: 80px; border-radius: 8px; margin-bottom: 10px;"
-                        )
+                        logo.setAttribute("style", "width: 300px; height: auto;")
                         progressPanelInner.appendChild(logo)
 
                         progressStr1 = document.createElement("h1")
@@ -509,15 +535,95 @@
                 container: "game_frame",
                 name: "EaglercraftX 1.8",
                 file: "net.lax1dude.eaglercraft.v1_8.client",
-                cid: "bafybeif23xugd7rdrzt56bgxn2lzgjb65zoxokywptvgoz3cuvxfginv7e",
+                cid: "bafybeidpdyddw2ee67zqaqd6qwuojr6xvdwplxatmowccule3mc6rchglu",
                 path: "",
-                dlSize: 11541029,
+                dlSize: 11552190,
                 gzip: true,
             }
         </script>
+        <style>
+            @font-face {
+                font-family: launch;
+                src: url("assets/launcher-font.otf") format("opentype");
+            }
+
+            body {
+                font-family: launch, sans-serif;
+                background-color: #000;
+                color: #fff;
+            }
+
+            #booting-splash {
+                position: fixed;
+                z-index: 100;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+                color: #fff;
+                font-size: 24px;
+                text-align: center;
+                pointer-events: none;
+            }
+
+            #prompt-click {
+                margin-top: 2rem;
+                animation: flashing 1s infinite;
+            }
+
+            @keyframes flashing {
+                0% {
+                    opacity: 0.5;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0.5;
+                }
+            }
+        </style>
     </head>
     <body
         style="margin: 0px; width: 100vw; height: 100vh; overflow: hidden;"
         id="game_frame"
     ></body>
+
+    <script>
+        let loadedOnce = false
+        let pressOnce = false
+        function loadOnce() {
+            if (!loadedOnce) {
+                loadedOnce = true
+
+                if (document.getElementById("prompt-click"))
+                    document.getElementById("prompt-click").remove()
+
+                const checkLogs = setInterval(() => {
+                    const logs = window.getLogMessages()
+                    if (logs.some((log) => log.includes("launching"))) {
+                        clearInterval(checkLogs)
+                        document.getElementById("booting-splash").remove()
+                    }
+                }, 1000)
+            }
+        }
+
+        document.body.onkeydown = () => {
+            if (!pressOnce) {
+                pressOnce = true
+                document.getElementById("game_frame").click()
+            }
+        }
+
+        document.getElementById("game_frame").addEventListener("click", () => {
+            loadOnce()
+        })
+    </script>
 </html>
