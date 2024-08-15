@@ -905,20 +905,23 @@ page.innerHTML = html`
     </span>
     <h1>${document.title.split("|").shift()}</h1>
     ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
-        .published &&
-    html` <div class="published">
-        <i>
-            ${estimateReadingTime(
-                pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
-                    .content
-            )}
-            minute read</i
-        >
-        <br />
-        ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
-            .published}
-    </div>`}
-    ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()].content}
+        ?.published ||
+    ("" &&
+        html` <div class="published">
+            <i>
+                ${estimateReadingTime(
+                    pages[
+                        new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()
+                    ]?.content || ""
+                )}
+                minute read</i
+            >
+            <br />
+            ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
+                ?.published || ""}
+        </div>`)}
+    ${pages[new URL(location.href).pathname.split("/").pop().split(".")[0].toLowerCase()]
+        ?.content || ""}
     <div class="read-more">
         <h2>
             Check out these articles to learn more about our services and how we benefit you
