@@ -12,12 +12,12 @@
         <!-- prettier-ignore -->
         <script>
             function useModColor(lastmod) {
-                if (!useModColor.colors) useModColor.colors = {}
-                if (!useModColor.colors[new Date(lastmod).getFullYear()]) {
-                    const randomColor = `hsl(${Math.floor(Math.random() * 360)}, ${Math.floor(Math.random() * 100)}%, 50%)`
-                    useModColor.colors[new Date(lastmod).getFullYear()] = randomColor
-                }
-                return `<span style="color: ${useModColor.colors[new Date(lastmod).getFullYear()]}">${lastmod}</span>`
+                let color = "unset"
+                if (new Date(lastmod).getFullYear() === new Date().getFullYear()) color = "magenta"
+                if (new Date(lastmod).getFullYear() === new Date().getFullYear() - 1) color = "orange"
+                if (new Date(lastmod).getFullYear() === new Date().getFullYear() - 2) color = "red"
+
+                return `<span style="color: ${color}">${lastmod}</span>`
             }
 
 			function generateSitemapPage(e){e=e.trim();const t=(new DOMParser).parseFromString(e,"application/xml").getElementsByTagName("url"),n=document.createElement("table");n.className="sitemap-table";const a=document.createElement("tr"),o=document.createElement("th");o.textContent="URL",a.appendChild(o);const d=document.createElement("th");d.textContent="Last Modified",a.appendChild(d);const m=document.createElement("th");m.textContent="Change Frequency",a.appendChild(m);const c=document.createElement("th");c.textContent="Priority",a.appendChild(c),n.appendChild(a);for(let e=0;e<t.length;e++){const a=t[e],o=a.getElementsByTagName("loc")[0].textContent,d=a.getElementsByTagName("lastmod")[0].textContent,m=a.getElementsByTagName("changefreq")[0].textContent,c=a.getElementsByTagName("priority")[0].textContent,l=document.createElement("tr"),r=document.createElement("td"),i=document.createElement("a");i.href=o,i.textContent=o,i.setAttribute("title",`Last modified: ${d}, Change frequency: ${m}, Priority: ${c}`),i.setAttribute("rel","nofollow"),r.appendChild(i),l.appendChild(r);const p=document.createElement("td");p.innerHTML=useModColor(d),l.appendChild(p);const s=document.createElement("td");s.textContent=m,l.appendChild(s);const C=document.createElement("td");C.textContent=c,l.appendChild(C),n.appendChild(l)}const l=document.createElement("div");l.className="sitemap-container",l.appendChild(n),document.body.appendChild(l)}
