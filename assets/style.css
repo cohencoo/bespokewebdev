@@ -664,7 +664,7 @@ section .about {
         font-weight: 600;
     }
 }
-
+/* 
 form {
     display: flex;
     flex-direction: column;
@@ -743,7 +743,7 @@ form select {
     background-repeat: no-repeat;
     background-position: right 0.5rem top 50%;
     background-size: 1rem auto;
-}
+} */
 
 footer {
     width: 100%;
