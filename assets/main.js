@@ -4,9 +4,9 @@ const cards = document.querySelectorAll(".card")
 document.getElementById("copyright").innerText = new Date().getUTCFullYear()
 
 const tags = [
+    "", // "Drive Sales",
     "Stand Out",
-    "Drive Sales",
-    "Boost Engagement",
+    "Grab Attention",
     "Make An Impact",
     "Be Memorable",
     "Inspire Action",
@@ -36,11 +36,16 @@ cards.forEach((card, index) => {
 const welcome = document.querySelector("#welcome")
 if (window.innerWidth < 1024) welcome.src = "bwd-p.mp4"
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) document.querySelector("nav").classList.add("scrolled")
+    else document.querySelector("nav").classList.remove("scrolled")
+})
+
 document.querySelector(".video-container").innerHTML = `<video
         class="video-banner"
         autoplay
         muted
-        src="assets/mock.mp4"
+        src="assets/background-animation.mp4"
         loop
         preload="none"
         playsinline
@@ -48,33 +53,9 @@ document.querySelector(".video-container").innerHTML = `<video
     <h2 class="hero-title">
         No gimmicks, no outrageous fees for separating design/development phases. Just brilliantly
         crafted
-        <span style="font-weight: 600; color: #ffae00;">
-            bespoke websites tailored to your success.</span
-        >
+        <span style="font-weight: 600; color: #ffae00;">bespoke websites tailored to your business.</span>
         Period.
     </h2>`
-
-document.getElementById("formsubmit").onsubmit = (e) => {
-    const phone = document.getElementById("contact-phone").value.replace(/[^0-9+]/g, "")
-    if (
-        phone.length < 15 &&
-        (phone.startsWith("04") || phone.startsWith("+61") || phone.startsWith("614"))
-    ) {
-    } else {
-        e.preventDefault()
-        alert("Sorry, to avoid spam & misuse, we only accept messages within Australia.")
-    }
-}
-
-function updateMockup(checked) {
-    if (checked) {
-        document.querySelector(".mock-phone").style.display = "none"
-        document.querySelector(".mock-mac").style.display = "block"
-    } else {
-        document.querySelector(".mock-phone").style.display = "block"
-        document.querySelector(".mock-mac").style.display = "none"
-    }
-}
 
 for (let i = 0; i < maxSlides; i++) {
     const div = document.createElement("div")
@@ -84,7 +65,9 @@ for (let i = 0; i < maxSlides; i++) {
 }
 
 const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting)
+    if (entries[0].isIntersecting) {
+        observer.disconnect()
+
         new Swiper(".swiper", {
             loop: true,
             speed: 700,
@@ -93,7 +76,11 @@ const observer = new IntersectionObserver((entries) => {
             autoplay: {
                 delay: 1500,
                 disableOnInteraction: true,
+                pauseOnMouseEnter: true,
             },
+
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -104,5 +91,7 @@ const observer = new IntersectionObserver((entries) => {
                 draggable: true,
             },
         })
+    }
 })
+
 observer.observe(swiperWrapper)

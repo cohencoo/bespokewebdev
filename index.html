@@ -15,6 +15,9 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/logo/logo-16.png" />
 
         <link rel="stylesheet" href="assets/style.css" />
+        <link rel="stylesheet" href="assets/material-symbols-rounded.css" />
+        <link rel="stylesheet" href="assets/packages/swiper-bundle.min.css" />
+
         <link rel="manifest" href="manifest.json" />
         <meta name="theme-color" content="#000000" />
         <meta
@@ -38,7 +41,7 @@
         <meta property="og:locale" content="en_AU" />
         <meta property="og:article:author" content="Bespoke Web Dev" />
         <meta property="article:publisher" content="https://bespokewebdev.com/" />
-        <meta property="article:modified_time" content="2024-08-15T20:22:59" />
+        <meta property="article:modified_time" content="2024-10-07T20:22:59" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bespoke Web Design & Development Adelaide" />
         <meta name="twitter:image" content="https://bespokewebdev.com/assets/banner.png" />
@@ -54,12 +57,22 @@
                 "description": "Unlock your online potential with a jaw-dropping bespoke web presence that turns heads & drives popularity.",
                 "url": "https://bespokewebdev.com",
                 "logo": "https://bespokewebdev.com/assets/logo/logo-512.png",
+                "telephone": "+61 405 495 145",
+                "image": "https://bespokewebdev.com/assets/banner.png",
                 "contactPoint": {
                     "@type": "ContactPoint",
                     "telephone": "+61 405 495 145",
                     "contactType": "Customer support"
                 },
                 "openingHours": "Mo-Su 08:00-18:00",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressCountry": "AU",
+                    "addressLocality": "Adelaide",
+                    "addressRegion": "SA",
+                    "postalCode": "5064",
+                    "streetAddress": "1/25 Bevington Road, Glenunga"
+                },
                 "sameAs": [
                     "https://www.facebook.com/profile.php?id=100093077884327",
                     "https://www.instagram.com/bespokewebdev",
@@ -75,21 +88,20 @@
         </script>
     </head>
     <body>
-        <div class="backdrop"></div>
         <nav>
-            <a style="gap: 2rem;" href="#">
+            <a aria-label="Home" href="#">
                 <img
                     class="logo"
                     src="assets/logo/logo.svg"
-                    title="Bespoke Web Dev"
-                    alt="Bespoke Web Dev"
+                    title="Bespoke Web Dev logo"
+                    alt="Bespoke Web Dev logo"
                 />
-                <h3 class="brand">Bespoke Web Dev</h3>
+                <p class="brand">Bespoke Web Dev</p>
             </a>
             <div class="links">
                 <a href="#about">About Us</a>
-                <a href="#clientele">Clientele</a>
-                <a href="mailto:hello@bespokewebdev.com">Contact Us</a>
+                <a href="#clientele">Our Work</a>
+                <a href="#contact">Contact Us</a>
             </div>
         </nav>
 
@@ -128,375 +140,583 @@
                 loop
             ></video>
             <div class="container">
-                <div
-                    class="banner-awards"
-                    style="display: flex; align-items: center; gap: 2rem; justify-content: center;"
-                >
+                <div class="banner-awards">
                     <a
                         href="https://techbehemoths.com/awards-2023/winners/web-design/bespoke-web-dev"
                         target="_blank"
+                        aria-label="See website design award on TechBehemoths"
                     >
-                        <img src="award-wds.png" style="width: 225px; height: auto;" alt="award" />
+                        <img src="assets/images/award-wds.webp" alt="web design awards 2023" />
                     </a>
                     <a
                         href="https://techbehemoths.com/awards-2023/winners/reactjs/bespoke-web-dev"
                         target="_blank"
+                        aria-label="See ReactJS award on TechBehemoths"
                     >
-                        <img src="award-jsx.png" style="width: 225px; height: auto;" alt="award" />
+                        <img src="assets/images/award-jsx.webp" alt="react awards 2023" />
                     </a>
                 </div>
 
                 <br /><br />
 
                 <h1>
-                    <span id="cycle">Drive Sales</span>
+                    <span id="cycle">Stand Out</span>
                     <span class="desktop-only">With A Bespoke Website</span>
                     <span class="mobile-only">With Bespoke Web Dev</span>
                 </h1>
             </div>
         </header>
 
-        <div class="ctaSection">
-            <h2 class="title">Get a FREE Mockup, designed for your business.</h2>
+        <main>
+            <section>
+                <h2 class="title">What a custom-developed website means for you</h2>
 
-            <p>
-                <b>Reach out, tell us about your business.</b>
-                <br />
-                Satisfied with the sample? We'll work together to tailor and launch it for success.
-                <!-- <a style="display: inline; color: var(--col-2);" href="pages/benefits.html"
-                    >Check out example mockups here.</a
-                > -->
-            </p>
+                <p class="about">
+                    A website tailored to your business gives you the freedom to dream big and bring
+                    those ideas to life with no limits.
+                </p>
 
-            <a class="cta" href="mailto:hello@bespokewebdev.com">
-                <button>
-                    <span style="opacity: 0; font-size: 1.5rem;" class="material-symbols-rounded"
-                        >chat</span
-                    >
-                    Get in touch now
-                </button>
-            </a>
-        </div>
-
-        <section id="about">
-            <h2 class="title">Why go <span class="brand">Bespoke Web Dev</span>?</h2>
-            <div class="cards">
-                <div class="card">
-                    <div class="flex">
-                        <span style="opacity: 0;" class="material-symbols-rounded icon"
-                            >design_services</span
-                        >
-                        <h3>Hand-Coded, No Third-Party Tools</h3>
-                        <span style="opacity: 0;" class="material-symbols-rounded dropdown"
-                            >expand_circle_down</span
-                        >
-                    </div>
-                    <p>
-                        All websites are unique & hand-coded, offering a
-                        <a style="display: inline;" href="pages/benefits.html"
-                            >range of benefits...</a
-                        >
-                        We strive to deliver tailor-made websites that drive sales and stand out
-                        from the competition.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="flex">
-                        <span style="opacity: 0;" class="material-symbols-rounded icon">draw</span>
-                        <h3>Tailor-Made To Your Needs</h3>
-                        <span style="opacity: 0;" class="material-symbols-rounded dropdown"
-                            >expand_circle_down</span
-                        >
-                    </div>
-                    <p>
-                        We'll work to understand your unique business needs and goals, and craft
-                        websites that are both professional and engaging.
-                        <a style="display: inline;" href="pages/services.html">Learn More...</a>
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="flex">
-                        <span style="opacity: 0;" class="material-symbols-rounded icon"
-                            >devices_other</span
-                        >
-                        <h3>Responsive Design & Mobile Friendly</h3>
-                        <span style="opacity: 0;" class="material-symbols-rounded dropdown"
-                            >expand_circle_down</span
-                        >
-                    </div>
-                    <p>
-                        With the majority of web traffic coming from mobile devices, we ensure that
-                        your website is mobile friendly and responsive for all devices.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="flex">
-                        <span style="opacity: 0;" class="material-symbols-rounded icon"
-                            >magic_exchange</span
-                        >
-                        <h3>Dedicated Support & Maintenance</h3>
-                        <span style="opacity: 0;" class="material-symbols-rounded dropdown"
-                            >expand_circle_down</span
-                        >
-                    </div>
-                    <p>
-                        We are dedicated to providing clients with exceptional complimentary support
-                        and maintenance, ensuring your website remains fully operational.
-                    </p>
-                </div>
-                <div class="card">
-                    <div class="flex">
-                        <span style="opacity: 0;" class="material-symbols-rounded icon"
-                            >cloud_done</span
-                        >
-                        <h3>FREE Website Hosting + SSL</h3>
-                        <span style="opacity: 0;" class="material-symbols-rounded dropdown"
-                            >expand_circle_down</span
-                        >
-                    </div>
-                    <p>
-                        You won't have to worry about the technicalities of hosting a website.
-                        However, we kindly ask that you register a Domain Name or provide us with
-                        access to an existing Domain Name. We'll take care of hosting & SSL
-                        licensing.
-                        <a style="display: inline;" href="pages/operation.html">Learn More...</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section style="padding: 0 5%;" id="clientele">
-            <h2 class="title">Our Client Portfolio</h2>
-            <div class="swiper">
-                <div class="swiper-wrapper"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="title">Our emphasis on <span class="brand">hand-coded</span> websites...</h2>
-            <p style="max-width: 800px;" class="about long-text">
-                Unlike third-party site builders, our hand-coded approach results in unique and
-                customized solutions that precisely meet your needs. By crafting websites from
-                scratch, we maintain complete control over the design and functionality of your
-                website.
-                <br /><br />
-                <a class="link" href="pages/benefits.html">
-                    <span style="opacity: 0;" class="material-symbols-rounded">arrow_forward</span>
-                    Read More on Benefits</a
-                >
-            </p>
-        </section>
-
-        <section style="max-width: 1400px; margin: 0 auto;">
-            <h2 class="title">Scaled to perfection for <span class="brand">all devices</span></h2>
-            <div class="mock-container">
-                <div class="switch">
+                <div class="benefits-grid">
                     <div>
-                        <p>Click to change device type</p>
-                        <div class="radio-inputs">
-                            <label onclick="updateMockup(false)" class="radio">
-                                <input type="radio" name="radio" />
-                                <span class="name">Mobile</span>
-                            </label>
-                            <label onclick="updateMockup(true)" class="radio">
-                                <input type="radio" name="radio" checked="" />
-                                <span class="name">Computer</span>
-                            </label>
-                        </div>
+                        <img src="assets/icons/limitless.svg" alt="Design and functionality" />
+                        <h3>
+                            Design and Functionality
+                            <i style="font-weight: 600; text-decoration: underline;"
+                                >Without Limits</i
+                            >
+                        </h3>
+                        <p>
+                            We create websites that reflect your unique vision, built entirely from
+                            scratch. Let us know your ideas, and we'll work with you to deliver a
+                            tailored quote.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="assets/icons/inhouse.svg" alt="In-house development" />
+                        <h3>
+                            In-House Development, No Outsourcing
+                        </h3>
+                        <p>
+                            Everything is designed & developed In-House: no third parties involved.
+                            This ensures total control over quality and design.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="assets/icons/no-ongoing.svg" alt="No ongoing subscription fees" />
+                        <h3>
+                            No Ongoing Subscription Fees
+                        </h3>
+                        <p>
+                            Our custom-built systems, including e-commerce features, mean you won't
+                            face monthly subscription for templates or plugins like you would with
+                            WIX or Squarespace.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="assets/icons/management.svg" alt="Hosting and technical setup" />
+                        <h3>
+                            Complete Management of Hosting and Technical Setup
+                        </h3>
+                        <p>
+                            We take care of hosting setup and other technical details. The only
+                            thing you'll need to handle is purchasing your domain.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="assets/icons/standout.svg" alt="Unique design" />
+                        <h3>
+                            A Website That Visually Stands Out
+                        </h3>
+                        <p>
+                            Unlike template-driven sites, your bespoke website will stand apart,
+                            giving you a visual edge against your competitors.
+                        </p>
+                    </div>
+
+                    <div>
+                        <img src="assets/icons/affordable.svg" alt="Affordable pricing" />
+                        <h3>
+                            Affordable, Tailored Solutions
+                        </h3>
+                        <p>
+                            Starting at just $800, we offer affordable, fully custom websites. No
+                            hidden charges or long-term contracts—just a one-time investment for a
+                            site that's built to last.
+                        </p>
                     </div>
                 </div>
+            </section>
 
-                <div class="preview">
-                    <img
-                        src="assets/mock-mac.webp"
-                        style="display: block;"
-                        class="mock-mac"
-                        title="Example of a website on a computer"
-                        alt="Example of a website on a computer"
-                    />
-                    <img
-                        src="assets/mock-phone.webp"
-                        style="display: none;"
-                        class="mock-phone"
-                        title="Example of a website on a phone"
-                        alt="Example of a website on a phone"
-                    />
-                </div>
-            </div>
-        </section>
+            <div class="ctaSection">
+                <h2 class="title">Get a FREE Mockup, designed for your business.</h2>
 
-        <section style="padding-top: 2rem; padding-bottom: 8rem;">
-            <img
-                src="assets/google.png"
-                style="width: auto; height: 100px; margin: 0 auto; display: block;"
-                alt="Rated 5-stars on Google"
-            />
-            <br /><br />
-            <h2 class="title separator">The quality speaks for itself, and so do our clients.</h2>
-            <br />
-            <div class="quotes">
-                <div>
-                    <q>Looks Great!</q>
-                    <p>–– Cleo's Candles</p>
-                    <a target="_blank" href="https://cleoscandles.com">cleoscandles.com</a>
-                </div>
-                <div>
-                    <q>I am at a lost for the words.</q>
-                    <p>–– Drain Doctor LLC, repeat client</p>
-                    <a target="_blank" href="https://www.calldraindoctor.com"
-                        >www.calldraindoctor.com</a
-                    >
-                </div>
-            </div>
-        </section>
+                <p>
+                    <b>Reach out, tell us about your business.</b>
+                    <br />
+                    Satisfied with the sample? We'll work together to tailor and launch it for
+                    success.
+                </p>
 
-        <section class="awards">
-            <a
-                href="https://techbehemoths.com/awards-2023/winners/web-design/bespoke-web-dev"
-                target="_blank"
-            >
-                <img src="award-wds.png" class="award" alt="2023 award winner for Website Design" />
-            </a>
-            <a
-                href="https://techbehemoths.com/awards-2023/winners/reactjs/bespoke-web-dev"
-                target="_blank"
-            >
-                <img src="award-jsx.png" class="award" alt="2023 award winner for ReactJS" />
-            </a>
-        </section>
-
-        <section style="padding: 3rem 0 0 0;">
-            <h2 class="title">
-                Join us on
-                <a target="_blank" href="https://www.facebook.com/profile.php?id=100093077884327"
-                    >Facebook</a
-                >
-            </h2>
-        </section>
-        <section class="flex-posts">
-            <a href="https://www.facebook.com/techbehemoths/posts/760307302812482" target="_blank">
-                <img src="assets/fb-1.png" alt="Facebook post" />
-            </a>
-            <a
-                href="https://www.facebook.com/DigitalNomadsHQ/posts/781258867351823"
-                target="_blank"
-            >
-                <img src="assets/fb-2.png" alt="Facebook post" />
-            </a>
-        </section>
-
-        <div class="hero-banner">
-            <div class="video-container"></div>
-        </div>
-
-        <section id="contact" style="background: rgba(50, 50, 50, 0.2);">
-            <h2 style="font-weight: 600; font-size: 2.5rem;" class="title">
-                Contact Us <span style="font-weight: 100; color: #555;">/</span> Get a Quote
-            </h2>
-            <p style="line-height: normal;" class="about">
-                Get in touch with us today to discuss your next website project.
-            </p>
-
-            <br /><br />
-
-            <center>
-                <a class="cta" href="mailto:hello@bespokewebdev.com" style="text-decoration: none;">
-                    <button style="display: flex; align-items: center; gap: 1rem;">
-                        <span style="opacity: 0;" class="material-symbols-rounded">chat</span>
+                <a class="cta" href="mailto:hello@bespokewebdev.com">
+                    <button>
+                        <span style="font-size: 1.3rem;" class="material-symbols-rounded"
+                            >chat</span
+                        >
                         Get in touch now
                     </button>
                 </a>
-            </center>
+            </div>
 
-            <!-- <form
-                id="formsubmit"
-                method="POST"
-            >
-                <span style="opacity: 0;" class="material-symbols-rounded">chat</span>
-                <input type="hidden" name="_subject" value="Business Inquiry" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-                <input
-                    type="hidden"
-                    name="_next"
-                    value="https://bespokewebdev.com/pages/thanks.html"
-                />
-
-                <input id="contact-name" type="text" name="name" required placeholder="Full Name" />
-                <input id="contact-email" type="email" name="email" required placeholder="Email" />
-                <input id="contact-phone" type="tel" name="phone" placeholder="Phone" />
-
-                <input id="contact-category" type="hidden" name="category" value="Landing Page" />
-                <label for="category">What website best fits your inquiry?</label>
-                <select id="category" name="category">
-                    <option value="Landing Page">Landing Page</option>
-                    <option value="Portfolio Page">Portfolio</option>
-                    <option value="Blog/Customer interaction">Blog/Customer interaction</option>
-                    <option value="Event Booking">Event Booking</option>
-                    <option value="E-Commerce Website">E-Commerce (Online Business)</option>
-                    <option value="Business Website">Business</option>
-                    <option value="Info & Services">Information and/or service</option>
-                    <option value="Health, Wellbeing & Fitness">Health, Wellbeing & Fitness</option>
-                    <option value="Catalog/Brochure Website">Catalog/Brochure Website</option>
-                    <option value="Personal">Personal</option>
-                    <option value="Nonprofit/Charity">Nonprofit/Charity</option>
-                    <option value="Education/Online Learning">Education/Online Learning</option>
-                    <option value="Social Network/Community">Social Network/Community</option>
-                    <option value="Real Estate">Real Estate</option>
-                    <option value="Travel and Tourism">Travel and Tourism</option>
-                    <option value="Government Organization">Government Organization</option>
-                    <option value="Restaurant/Food Services">Restaurant/Food Services</option>
-                    <option value="Art/Creative Portfolio">Art/Creative Portfolio</option>
-                    <option value="News/Media">News/Media</option>
-                    <option value="Personal Branding">Personal Branding</option>
-                    <option value="Other (please explain below)"
-                        >Other (please explain below)</option
-                    >
-                </select>
-
-                <input id="contact-pages" type="hidden" name="proposed-pages" value="1" />
-                <label for="proposed-pages">Proposed number of pages</label>
-                <select id="proposed-pages" name="proposed-pages">
-                    <option value="1">1</option>
-                    <option value="1-5">1-5</option>
-                    <option value="5-10">5-10</option>
-                    <option value="10-20">10-20</option>
-                    <option value="20-30">20-30</option>
-                    <option value="30+">30+</option>
-                </select>
-
-                <label for="contact-budget">What is your budget?</label>
-                <input
-                    id="contact-budget"
-                    placeholder="AUD $"
-                    name="contact-budget"
-                    value="AUD $"
-                />
-
-                <textarea
-                    required
-                    placeholder="Write your message..."
-                    name="comment"
-                    id="comment"
-                    rows="3"
-                ></textarea>
-
-                <button type="submit">Send Inquiry</button>
-                <p style="margin: 10px 0; text-align: center; color: #999;">
-                    or contact us directly at
-                    <a href="mailto:test@test.com">test</a>
+            <section id="about">
+                <h2 class="title">Why <span class="brand">Bespoke Web Dev</span>?</h2>
+                <p class="about">
+                    We specialize in building websites that are made for your business.
+                    <b>No pre-designed templates or plug-and-play rubbish.</b>
                 </p>
-            </form> -->
-        </section>
+                <br /><br />
+                <div class="cards">
+                    <div class="card">
+                        <div class="flex">
+                            <span class="material-symbols-rounded icon">design_services</span>
+                            <h3>Hand-Coded, No Third-Party Tools</h3>
+                            <span class="material-symbols-rounded dropdown"
+                                >expand_circle_down</span
+                            >
+                        </div>
+                        <p>
+                            All websites are unique & hand-coded, offering a
+                            <a style="display: inline;" href="pages/benefits.html"
+                                >range of benefits...</a
+                            >
+                            We strive to deliver tailor-made websites that drive sales and stand out
+                            from the competition.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="flex">
+                            <span class="material-symbols-rounded icon">draw</span>
+                            <h3>Tailor-Made To Your Needs</h3>
+                            <span class="material-symbols-rounded dropdown"
+                                >expand_circle_down</span
+                            >
+                        </div>
+                        <p>
+                            We'll work to understand your unique business needs and goals, and craft
+                            websites that are both professional and engaging.
+                            <a
+                                style="display: inline;"
+                                aria-label="Learn more about our services"
+                                href="pages/services.html"
+                                >Learn More...</a
+                            >
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="flex">
+                            <span class="material-symbols-rounded icon">devices_other</span>
+                            <h3>Responsive Design & Mobile Friendly</h3>
+                            <span class="material-symbols-rounded dropdown"
+                                >expand_circle_down</span
+                            >
+                        </div>
+                        <p>
+                            With the majority of web traffic coming from mobile devices, we ensure
+                            that your website is mobile friendly and responsive for all devices.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="flex">
+                            <span class="material-symbols-rounded icon">magic_exchange</span>
+                            <h3>Dedicated Support & Maintenance</h3>
+                            <span class="material-symbols-rounded dropdown"
+                                >expand_circle_down</span
+                            >
+                        </div>
+                        <p>
+                            We are dedicated to providing clients with exceptional complimentary
+                            support and maintenance, ensuring your website remains fully
+                            operational.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="flex">
+                            <span class="material-symbols-rounded icon">cloud_done</span>
+                            <h3>FREE Website Hosting + SSL</h3>
+                            <span class="material-symbols-rounded dropdown"
+                                >expand_circle_down</span
+                            >
+                        </div>
+                        <p>
+                            You won't have to worry about the technicalities of hosting a website.
+                            However, we kindly ask that you register a Domain Name or provide us
+                            with access to an existing Domain Name. We'll take care of hosting & SSL
+                            licensing.
+                            <a
+                                style="display: inline;"
+                                aria-label="Learn more about our operation"
+                                href="pages/operation.html"
+                                >Learn More...</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="color-section">
+                <h2 class="title">No Recurring Fees, Just Quality Work</h2>
+                <p style="color: #ddd;" class="about long-text">
+                    Unlike DIY platforms that lock you into costly subscriptions, we offer a
+                    one-time, affordable fee for a fully custom site. You own it, no hidden costs.
+                </p>
+            </section>
+
+            <section style="padding: 0 5%;" id="clientele">
+                <h2 class="title">Featured Projects</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </section>
+
+            <section class="hand-coded">
+                <h2 class="title">
+                    Our emphasis on <span class="brand">hand-coded</span> websites...
+                </h2>
+                <p class="about long-text">
+                    Unlike third-party site builders, our hand-coded approach results in unique and
+                    customized solutions that precisely meet your needs. By crafting websites from
+                    scratch, we maintain complete control over the design and functionality of your
+                    website.
+                </p>
+
+                <h3>Find Out More</h3>
+
+                <div class="article-headlines">
+                    <a
+                        class="article"
+                        aria-label="Learn more about DIY or Bespoke Websites"
+                        href="pages/diy-or-bespoke.html"
+                    >
+                        <div
+                            class="preview"
+                            style="
+                                background-image: url(pages/assets/thumbnails/diy-or-bespoke.webp);
+                            "
+                        ></div>
+                        <span>
+                            <h4>
+                                DIY or Bespoke Websites
+                            </h4>
+                            <p>
+                                The benefits of a hand-coded website over a DIY platform like WIX or
+                                Squarespace.
+                            </p>
+                        </span>
+                    </a>
+                    <a
+                        class="article"
+                        aria-label="Learn more about the benefits of hand-coded websites"
+                        href="pages/benefits.html"
+                    >
+                        <div
+                            class="preview"
+                            style="background-image: url(pages/assets/thumbnails/benefits.webp);"
+                        ></div>
+                        <span>
+                            <h4>The Power of Hand-Coded Websites</h4>
+                            <p>
+                                What really sets a hand-coded website apart from the rest? Find out
+                                here.
+                            </p>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <img
+                    src="assets/images/google-stars.webp"
+                    style="width: auto; height: 100px; margin: 0 auto; display: block;"
+                    alt="Rated 5-stars on Google"
+                />
+                <br /><br />
+                <h2 class="title separator">
+                    The quality speaks for itself, and so do our clients.
+                </h2>
+                <div class="quotes">
+                    <div>
+                        <q>Looks Great!</q>
+                        <p>–– Cleo's Candles</p>
+                        <a target="_blank" href="https://cleoscandles.com">cleoscandles.com</a>
+                    </div>
+                    <div>
+                        <q>I am at a lost for the words.</q>
+                        <p>–– Drain Doctor LLC, repeat client</p>
+                        <a target="_blank" href="https://www.calldraindoctor.com"
+                            >www.calldraindoctor.com</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section class="awards">
+                <div>
+                    <h2 class="title">Award-Winning Website Design</h2>
+                    <p>
+                        In 2023, Bespoke Web Dev was an award winner for
+                        <a
+                            href="https://techbehemoths.com/awards-2023/winners/web-design/bespoke-web-dev"
+                            target="_blank"
+                            >Website Design</a
+                        >
+                        and
+                        <a
+                            href="https://techbehemoths.com/awards-2023/winners/reactjs/bespoke-web-dev"
+                            target="_blank"
+                            >ReactJS</a
+                        >
+                    </p>
+                </div>
+                <a
+                    href="https://techbehemoths.com/awards-2023/winners/web-design/bespoke-web-dev"
+                    target="_blank"
+                    aria-label="See website design award on TechBehemoths"
+                >
+                    <img
+                        src="assets/images/award-wds.webp"
+                        class="award"
+                        alt="2023 award winner for Website Design"
+                    />
+                </a>
+                <a
+                    href="https://techbehemoths.com/awards-2023/winners/reactjs/bespoke-web-dev"
+                    target="_blank"
+                    aria-label="See ReactJS award on TechBehemoths"
+                >
+                    <img
+                        src="assets/images/award-jsx.webp"
+                        class="award"
+                        alt="2023 award winner for ReactJS"
+                    />
+                </a>
+            </section>
+
+            <section>
+                <h2 class="title">
+                    Join us on
+                    <a
+                        target="_blank"
+                        href="https://www.facebook.com/profile.php?id=100093077884327"
+                        >Facebook</a
+                    >
+                </h2>
+                <div class="flex-posts">
+                    <a
+                        href="https://www.facebook.com/techbehemoths/posts/760307302812482"
+                        target="_blank"
+                        aria-label="TechBehemoths Facebook post"
+                    >
+                        <img
+                            src="assets/images/fb-1.webp"
+                            alt="Bespoke Web Dev awarded winner by TechBehemoths in a Facebook post"
+                        />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/DigitalNomadsHQ/posts/781258867351823"
+                        target="_blank"
+                        aria-label="Other businesses awarded winner by TechBehemoths in a Facebook post"
+                    >
+                        <img
+                            src="assets/images/fb-2.webp"
+                            alt="Other businesses awarded winner by TechBehemoths in a Facebook post"
+                        />
+                    </a>
+                </div>
+            </section>
+
+            <div class="hero-banner">
+                <div class="video-container"></div>
+            </div>
+
+            <section id="contact">
+                <div class="flow-pages">
+                    <div style="max-width: 800px;" class="page">
+                        <h2 class="question title">How can we help your business?</h2>
+
+                        <h2 style="text-align: center;">
+                            I'm looking for a...
+                            <select
+                                id="category"
+                                name="category"
+                                aria-label="Select a website type"
+                            >
+                                <option value="Landing Page">Landing Page</option>
+
+                                <option value="Business Services">Business Services</option>
+
+                                <option value="Event Booking">Scheduling / Bookings</option>
+
+                                <option value="E-Commerce Website">eCommerce (Online Shop)</option>
+
+                                <option value="Blog">Blog / Community</option>
+                                <option value="Nonprofit/Charity">Events/Nonprofit</option>
+
+                                <option value="Portfolio Page">Portfolio</option>
+
+                                <option value="Other">Other</option>
+                            </select>
+                            website.
+                        </h2>
+                    </div>
+                    <div class="page">
+                        <h2 class="question title">What is the industry of your business?</h2>
+
+                        <select name="industry" id="industry" aria-label="Select an industry">
+                            <option value="Unselected">Please select</option>
+                            <option value="Accommodation and food services industry"
+                                >Accommodation and food services</option
+                            >
+                            <option value="Administrative and support services industry"
+                                >Administrative and support services</option
+                            >
+                            <option value="Agriculture, forestry and fishing industry"
+                                >Agriculture, forestry and fishing</option
+                            >
+                            <option value="Arts and recreation services industry"
+                                >Arts and recreation services</option
+                            >
+                            <option value="Construction industry">Construction</option>
+                            <option value="Education and training industry"
+                                >Education and training</option
+                            >
+                            <option value="Financial and insurance services industry"
+                                >Financial and insurance services</option
+                            >
+                            <option value="Health care and social assistance industry"
+                                >Health care and social assistance</option
+                            >
+                            <option value="Information media and telecommunications industry"
+                                >Information media and telecommunications</option
+                            >
+                            <option value="Manufacturing industry">Manufacturing</option>
+                            <option value="Mining industry">Mining</option>
+                            <option value="Professional, scientific and technical services industry"
+                                >Professional, scientific and technical services</option
+                            >
+                            <option value="Rental, hiring and real estate services industry"
+                                >Rental, hiring and real estate services</option
+                            >
+                            <option value="Retail and wholesale trade industry"
+                                >Retail and wholesale trade</option
+                            >
+                            <option value="Tourism industry">Tourism</option>
+                            <option value="Transport, postal and warehousing industry"
+                                >Transport, postal and warehousing</option
+                            >
+                        </select>
+                    </div>
+
+                    <div class="page">
+                        <h2 class="question title">
+                            The purpose of your website is to have visitors:
+                        </h2>
+
+                        <select name="purpose" id="purpose" aria-label="Select a website purpose">
+                            <option value="Unselected">Please select</option>
+                            <option value="Contact you">Contact you</option>
+                            <option value="Book an appointment">Book an appointment</option>
+                            <option value="Purchase products">Purchase products</option>
+                            <option value="Read your blog">Read your blog</option>
+                            <option value="Come to your business/event"
+                                >Come to your business/event</option
+                            >
+                            <option value="Learn more about your services"
+                                >Learn more about your services</option
+                            >
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <br /><br /><br />
+
+                        <h2 style="font-weight: 400;">
+                            Do you have an existing website?
+                        </h2>
+
+                        <input
+                            type="text"
+                            name="existingWebsite"
+                            id="existingWebsite"
+                            placeholder="Website URL (if applicable)"
+                        />
+                    </div>
+
+                    <div class="page">
+                        <h2 class="question title">
+                            Who's the best person to contact?
+                        </h2>
+
+                        <div class="inputs">
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Full Name"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                            <input type="tel" name="phone" id="phone" placeholder="Phone" />
+                        </div>
+
+                        <h2 style="font-weight: 400;">
+                            Is there anything else you'd like us to know?
+                        </h2>
+
+                        <ul>
+                            <li>What is your business name?</li>
+                            <li>
+                                Do you have existing branding assets? (eg. logo, images, color
+                                schemes?)
+                            </li>
+                            <li>Any specific features you'd like to include?</li>
+                        </ul>
+
+                        <textarea
+                            name="additional"
+                            id="additional"
+                            rows="3"
+                            placeholder="Please provide any additional details here."
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button id="go-prev" style="display: none;" onclick="prevPage()">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                    <button id="go-next" style="display: none;" onclick="nextPage()">
+                        Next
+                        <span class="material-symbols-rounded">arrow_forward</span>
+                    </button>
+                </div>
+            </section>
+        </main>
 
         <footer>
             <div>
-                <h3>
-                    Contact Us
-                </h3>
+                <h3>Contact Us</h3>
+
                 <a
                     style="font-size: 1.1rem; font-weight: 500;"
                     href="mailto:hello@bespokewebdev.com"
@@ -509,68 +729,30 @@
                         class="social"
                         target="_blank"
                         href="https://www.facebook.com/profile.php?id=100093077884327"
+                        aria-label="Facebook"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                            ></path>
-                        </svg>
+                        <!-- prettier-ignore -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         <span>Facebook</span>
                     </a>
                     <a
                         class="social"
                         target="_blank"
                         href="https://www.instagram.com/bespokewebdev"
+                        aria-label="Instagram"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
+                        <!-- prettier-ignore -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         <span>Instagram</span>
                     </a>
                     <a
                         class="social"
                         target="_blank"
                         href="https://www.linkedin.com/company/bespokewebdev"
+                        aria-label="LinkedIn"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        >
-                            <path
-                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                            ></path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg>
+                        <!-- prettier-ignore -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         <span>LinkedIn</span>
                     </a>
                 </div>
@@ -603,20 +785,10 @@
                 <span>ABN: 43 464 545 840</span>
             </p>
         </footer>
-        <script>
-            const icons = document.querySelectorAll(".material-symbols-rounded")
-            const renderIcons = () => icons.forEach((e) => (e.style.opacity = 1))
-        </script>
-        <link
-            rel="preload"
-            href="assets/material-symbols-rounded.css"
-            as="style"
-            onload="this.onload=null;this.rel='stylesheet';renderIcons()"
-        />
-        <link rel="stylesheet" href="assets/packages/swiper-bundle.min.css" />
-        <script async defer src="assets/packages/swiper-bundle.min.js"></script>
-        <script async defer src="assets/main.js"></script>
-        <script async defer src="https://login.bespokewebdev.com/cms.js"></script>
+        <script src="assets/packages/swiper-bundle.min.js"></script>
+        <script src="assets/main.js"></script>
+        <script src="assets/form.js"></script>
+        <script src="https://login.bespokewebdev.com/cms.js"></script>
         <script defer async type="text/javascript">
             ;(function (c, l, a, r, i, t, y) {
                 c[a] =
