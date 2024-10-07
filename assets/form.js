@@ -127,8 +127,14 @@ function submit() {
     document.querySelector(".navigation").style.display = "none"
     scrollIntoView()
 
-    function displayError() {
-        pages[page].innerHTML = `
+    fetch("https://bespokewebdev.onrender.com/api/bwd-submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+    })
+        .then((res) => res.text())
+        .catch(() => {
+            pages[page].innerHTML = `
             <h2 style="font-size: 3rem">Ooops!</h2>
             <h2 style="text-align: left;" class="question title">There was an error submitting your form.</h2>
             <p>We're so sorry for the inconvenience. Please contact us directly:</p>
@@ -136,18 +142,5 @@ function submit() {
             <a style="text-decoration: underline; font-weight: 600; font-size: 1.5rem;" href="mailto:hello@bespokewebdev.com">
                 hello@bespokewebdev.com
             </a>`
-    }
-
-    fetch("https://bespokewebdev.onrender.com/api/bwd-submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-    })
-        .then((res) => res.text())
-        .then((res) => {
-            if (res.success) {
-                console.log("Success!")
-            } else displayError()
         })
-        .catch(() => displayError())
 }
