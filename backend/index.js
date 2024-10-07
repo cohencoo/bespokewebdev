@@ -60,7 +60,7 @@ app.post("/api/bwd-submit", (req, res) => {
     })
 
     post({
-        to: BWD_TO_EMAIL,
+        to: process.env.BWD_TO_EMAIL,
         subject: "Bespoke Web Dev Inquiry",
         html: `
         <div style="background-color: #f9f9f9; padding: 20px; margin: 20px; border-radius: 20px;">
