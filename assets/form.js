@@ -108,6 +108,20 @@ function submit() {
         data[input.name] = input.value
     })
 
+    try {
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+        if (timezone) data.timezone = timezone
+
+        const device = navigator.platform
+        if (device) data.device = device
+
+        const viewport = window.innerWidth + "x" + window.innerHeight
+        data.viewport = viewport
+
+        const referrer = document.referrer
+        if (referrer) data.referrer = referrer
+    } catch (e) {}
+
     if (!data.name || !data.email || !data.phone) {
         alert("Please include your contact information, so we can reach out to you.")
         return
@@ -120,7 +134,7 @@ function submit() {
     }!</h2>
     
     <h2 style="text-align: left; font-weight: 400;">
-    We'll be in touch with you shortly to discuss your ${data.category} website project.
+        We'll be in touch with you shortly to discuss your ${data.category} website project.
     </h2>
     `
 

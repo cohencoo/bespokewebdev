@@ -579,44 +579,42 @@
 
                         <select name="industry" id="industry" aria-label="Select an industry">
                             <option value="Unselected">Please select</option>
-                            <option value="Accommodation and food services industry"
+                            <option value="Accommodation and food services"
                                 >Accommodation and food services</option
                             >
-                            <option value="Administrative and support services industry"
+                            <option value="Administrative and support services"
                                 >Administrative and support services</option
                             >
-                            <option value="Agriculture, forestry and fishing industry"
+                            <option value="Agriculture, forestry and fishing"
                                 >Agriculture, forestry and fishing</option
                             >
-                            <option value="Arts and recreation services industry"
+                            <option value="Arts and recreation services"
                                 >Arts and recreation services</option
                             >
-                            <option value="Construction industry">Construction</option>
-                            <option value="Education and training industry"
-                                >Education and training</option
-                            >
-                            <option value="Financial and insurance services industry"
+                            <option value="Construction">Construction</option>
+                            <option value="Education and training">Education and training</option>
+                            <option value="Financial and insurance services"
                                 >Financial and insurance services</option
                             >
-                            <option value="Health care and social assistance industry"
+                            <option value="Health care and social assistance"
                                 >Health care and social assistance</option
                             >
-                            <option value="Information media and telecommunications industry"
+                            <option value="Information media and telecommunications"
                                 >Information media and telecommunications</option
                             >
-                            <option value="Manufacturing industry">Manufacturing</option>
-                            <option value="Mining industry">Mining</option>
-                            <option value="Professional, scientific and technical services industry"
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Mining">Mining</option>
+                            <option value="Professional, scientific and technical services"
                                 >Professional, scientific and technical services</option
                             >
-                            <option value="Rental, hiring and real estate services industry"
+                            <option value="Rental, hiring and real estate services"
                                 >Rental, hiring and real estate services</option
                             >
-                            <option value="Retail and wholesale trade industry"
+                            <option value="Retail and wholesale trade"
                                 >Retail and wholesale trade</option
                             >
-                            <option value="Tourism industry">Tourism</option>
-                            <option value="Transport, postal and warehousing industry"
+                            <option value="Tourism">Tourism</option>
+                            <option value="Transport, postal and warehousing"
                                 >Transport, postal and warehousing</option
                             >
                         </select>
@@ -653,6 +651,7 @@
                             name="existingWebsite"
                             id="existingWebsite"
                             placeholder="Website URL (if applicable)"
+                            maxlength="120"
                         />
                     </div>
 
@@ -667,6 +666,7 @@
                                 name="name"
                                 id="name"
                                 placeholder="Full Name"
+                                maxlength="60"
                                 required
                             />
                             <input
@@ -674,9 +674,16 @@
                                 name="email"
                                 id="email"
                                 placeholder="Email"
+                                maxlength="120"
                                 required
                             />
-                            <input type="tel" name="phone" id="phone" placeholder="Phone" />
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="Phone"
+                                maxlength="20"
+                            />
                         </div>
 
                         <h2 style="font-weight: 400;">
@@ -696,6 +703,7 @@
                             name="additional"
                             id="additional"
                             rows="3"
+                            maxlength="3000"
                             placeholder="Please provide any additional details here."
                         ></textarea>
                     </div>
