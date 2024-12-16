@@ -104,27 +104,46 @@ function submit() {
     const form = document.getElementById("contact")
     const inputs = form.querySelectorAll("input, textarea, select")
     const data = {}
+
     inputs.forEach((input) => {
-        data[input.name] = input.value
+        const value = input.value.trim()
+
+        switch (input.name) {
+            case "email":
+                if (!isValidEmail(value)) {
+                    alert(`Please enter a valid email address for ${input.name}`)
+                    throw new Error("Invalid email")
+                }
+                break
+            case "phone":
+                if (!isValidPhoneNumber(value)) {
+                    alert(`Please enter a valid phone number`)
+                    throw new Error("Invalid phone")
+                }
+                break
+            case "name":
+                if (!value) {
+                    alert("Please enter a name")
+                    throw new Error("Invalid name")
+                }
+                if (value.length > 50 || /[<>&]/.test(value)) {
+                    alert("Please enter a valid name")
+                    throw new Error("Invalid name")
+                }
+                break
+        }
+
+        data[input.name] = value
     })
 
-    try {
-        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
-        if (timezone) data.timezone = timezone
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        return emailRegex.test(email)
+    }
 
-        const device = navigator.platform
-        if (device) data.device = device
-
-        const viewport = window.innerWidth + "x" + window.innerHeight
-        data.viewport = viewport
-
-        const referrer = document.referrer
-        if (referrer) data.referrer = referrer
-    } catch (e) {}
-
-    if (!data.name || !data.email || !data.phone) {
-        alert("Please include your contact information, so we can reach out to you.")
-        return
+    function isValidPhoneNumber(phone) {
+        const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+        return phoneRegex.test(phone)
     }
 
     pages[page].innerHTML = `
