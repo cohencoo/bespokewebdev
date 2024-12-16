@@ -136,6 +136,20 @@ function submit() {
         data[input.name] = value
     })
 
+    try {
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+        if (timezone) data.timezone = timezone
+
+        const device = navigator.platform
+        if (device) data.device = device
+
+        const viewport = window.innerWidth + "x" + window.innerHeight
+        data.viewport = viewport
+
+        const referrer = document.referrer
+        if (referrer) data.referrer = referrer
+    } catch (e) {}
+
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         return emailRegex.test(email)
